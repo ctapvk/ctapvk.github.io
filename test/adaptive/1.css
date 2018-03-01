@@ -1,0 +1,55 @@
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    div.image_gallery {
+        margin: 0 auto;
+        width: 1000px;
+        text-align: center;
+        max-width: 90%;
+        /* контейнер не превышает 90% ширины экрана */
+        min-width: 500px;
+    }
+
+    img {
+        float: left;
+        max-width: 31%;
+        height: auto;
+        padding: 1%;
+        /* небольшие оступы для изображений */
+    }
+
+    @media screen and (max-width: 768px) {
+        /* разрешение планшета */
+        h1 {
+            font-size: 20px;
+        }
+        div.image_gallery {
+            min-width: 320px;
+        }
+        img {
+            max-width: 48%;
+            height: auto;
+            padding: 1%;
+            /* небольшие оступы для изображений */
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        /* разрешение смартфона */
+        h1 {
+            min-width: 320px;
+            font-size: 16px;
+        }
+        div.image_gallery {
+            width: 320px;
+            min-width: 320px;
+        }
+        img {
+            max-width: 98%;
+            height: auto;
+            padding: 1%;
+            /* небольшие оступы для изображений */
+        }
+    }
