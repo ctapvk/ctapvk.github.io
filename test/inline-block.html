@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    .lineContainer {
+        overflow: hidden;
+        /* clear the float */
+        border: 1px solid #000
+    }
+
+    .lineContainer div {
+        height: 20px
+    }
+
+    .left {
+        width: 100px;
+        float: left;
+        border-right: 1px solid #000
+    }
+
+    .right {
+        overflow: hidden;
+        background: #ccc
+    }
+
+
+
+    .mainDiv {
+        display: flex; 
+    }
+
+    div.filter {
+        vertical-align: top;
+        display: inline-block;
+        width: 100px;
+        border: 1px solid #000;
+    }
+
+    div.results {
+        width: 100%;
+        display: inline-block;
+        border: 1px solid #000;
+        background: #ccc
+    }
+    </style>
+</head>
+
+<body>
+    <div class="lineContainer">
+        <div class="left">left</div>
+        <div class="right">right</div>
+    </div>
+    <div class="mainDiv">
+        <div class="filter">left</div>
+        <div class="results">right</div>
+    </div>
+</body>
+
+</html>
