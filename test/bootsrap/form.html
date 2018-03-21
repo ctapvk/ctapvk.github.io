@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap/form </title>
+    <!-- awesome core  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/lib/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>Электронная почта</label>
+                <div class="form-group">
+                    <div class="input-group" ng-repeat="email in ctrl.currentItem.subject_emails">
+                        <input type="hidden" ng-model="email.id">
+                        <input type="email" class="form-control" ng-model="email.email">
+                        <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" >
+                                    <i class="fa fa-close"></i>
+                                </button>
+                            </span>
+                    </div>
+                    <button type="button" class="btn btn-default" ng-click="ctrl.currentItem.subject_emails.push({});">
+                        <i class="fa fa-plus"></i> Добавить почту
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1>fa fa-close</h1>
+
+<i class="fa fa-close"></i>
+<i class="fa fa-close" style="font-size:24px"></i>
+<i class="fa fa-close" style="font-size:36px"></i>
+<i class="fa fa-close" style="font-size:48px;color:red"></i>
+<br>
+
+<p>Used on a button:</p>
+<button style="font-size:24px">Button <i class="fa fa-close"></i></button>
+
+<p>Unicode:</p>
+<i style="font-size:24px" class="fa">&#xf00d;</i>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/lib/jquery-3.2.1.slim.min.js"></script>
+    <script src="/lib/popper.min.js"></script>
+    <script src="/lib/bootstrap.min.js"></script>
+    <script src="/lib/holder.min.js"></script>
+</body>
+
+</html>

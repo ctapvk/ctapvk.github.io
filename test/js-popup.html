@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>js-popup.html</title>
+    <style type="text/css">
+    .popup[title]:hover:after {
+        content: attr(title);
+        position: relative;
+        top: 30px;
+        right: : 30px;
+    }
+    </style>
+</head>
+
+<body>
+    <input id="my" title="Доступные символы: цифры 0-9.">
+    <a class="popup" title="Доступные символы: цифры 0-9."> asdasd</a>
+    <div id="popup" style="position: absolute; top: 30px; display: none ; font-size: 22px ; padding: 1%; background: #000000; border: 1px solid; "></div>
+    <script>
+    var el = document.getElementById("my");
+    var popup = document.getElementById("popup");
+    var titlePopup = el.getAttribute("title");
+    popup.innerHTML = titlePopup;
+    el.onfocus = function() {
+        var rect = this.getBoundingClientRect();
+        console.log(this.getAttribute("title"), rect.top, rect.right, rect.bottom, rect.left);
+        popup.style.display = "block";
+    };
+    el.onfocusout = function() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "none";
+    };
+    </script>
+</body>
+
+</html>
