@@ -1,68 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>angular / form </title>
-	    <!-- awesome core  -->
+    <meta charset="UTF-8">
+    <title>angular / form </title>
+    <!-- awesome core  -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
-
-	    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS -->
     <link href="/lib/bootstrap.min.css" rel="stylesheet">
-	<script type="text/javascript" src="/lib/angular.min.js"></script>
+    <script type="text/javascript" src="/lib/angular.min.js"></script>
 </head>
-<body>
-				<div class="col-md-3">
-                <div class="form-group">
-                    <label>Электронная почта</label>
-                    <div class="form-group">
-                        <div class="input-group" ng-repeat="email in ctrl.currentItem.subject_emails">
-                            <input type="hidden" ng-model="email.id">
-                            <input type="email" class="form-control" ng-model="email.email">
-                            <span class="input-group-btn">
-                                <button type="button" class="btn btn-default" ng-click="ctrl.currentItem.subject_emails.splice($index, 1);">
-                                    <i class="fa fa-close"></i>
-                                </button>
-                            </span>
-                        </div>
-                        <button type="button" class="btn btn-default" ng-click="ctrl.currentItem.subject_emails.push({});">
-                            <i class="fa fa-plus"></i> Добавить почту
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="form-group">
-                    <label>Телефон</label>
-                    <div class="form-group">
-                        <div class="input-group" ng-repeat="phone in ctrl.currentItem.phones">
-                            <input type="hidden" ng-model="phone.id">
-                            <select class="form-control col-md-3" ng-model="phone.phone_type_id" convert-to-number>
-                                @foreach ($phoneTypes as $phoneType)
-                                    <option value="<% $phoneType['id'] %>"><% $phoneType['name'] %></option>
-                                @endforeach
-                            </select>
-                            <span class="input-group-btn delimiter"></span>
-                            <input type="text" class="form-control" ng-model="phone.number" maxlength="30">
-                            <span class="input-group-btn">
-                                <button type="button" class="btn btn-default" ng-click="ctrl.currentItem.phones.splice($index, 1);">
-                                    <i class="fa fa-close"></i>
-                                </button>
-                            </span>
-                        </div>
-                        <button type="button" class="btn btn-default" ng-click="ctrl.currentItem.phones.push({phone_type_id:'2', number:''});">
-                            <i class="fa fa-plus"></i> Добавить телефон
-                        </button>
-                    </div>
-                </div>
-            </div>
+<script>
+var app = angular.module("myapp", []);
+app.controller("ctrl", function($scope) {
+    $scope.products = [{id:1  , email:"ads"} , {id:1  , email:"ads"} ];
+});
+</script>
 
-	    <!-- Bootstrap core JavaScript
+<body ng-app="myapp" ng-controller="ctrl">
+    <div class="col-md-3">
+        <div class="form-group">
+            <label>Электронная почта</label>
+            <div class="form-group">
+                <div class="input-group" ng-repeat="email in products">
+                    <input type="hidden" ng-model="email.id">
+                    <input type="email" class="form-control" ng-model="email.email">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="products.splice($index, 1)">
+                            <i class="fa fa-close"></i>
+                        </button>
+                    </span>
+                </div>
+                <button type="button" class="btn btn-default" ng-click="products.push({});">
+                    <i class="fa fa-plus"></i> Добавить почту
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/lib/jquery-3.2.1.slim.min.js"></script> 
+    <script src="/lib/jquery-3.2.1.slim.min.js"></script>
     <script src="/lib/popper.min.js"></script>
     <script src="/lib/bootstrap.min.js"></script>
     <script src="/lib/holder.min.js"></script>
 </body>
+
 </html>
