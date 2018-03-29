@@ -13,9 +13,14 @@
 </head>
 <script>
 var app = angular.module("myapp", []);
-app.controller("ctrl", function($scope) {
+app.controller("ctrl", test);
+
+function test($scope) {
     $scope.products = [{id:1  , email:"ads"} , {id:1  , email:"ads"} ];
-});
+    $scope.log = function () {
+        console.log($scope.products);
+    }
+}
 </script>
 
 <body ng-app="myapp" ng-controller="ctrl">
@@ -34,6 +39,9 @@ app.controller("ctrl", function($scope) {
                 </div>
                 <button type="button" class="btn btn-default" ng-click="products.push({});">
                     <i class="fa fa-plus"></i> Добавить почту
+                </button>
+                <button type="button" class="btn btn-default" ng-click="log();">
+                    <i class="fa fa-plus"></i> log
                 </button>
             </div>
         </div>
