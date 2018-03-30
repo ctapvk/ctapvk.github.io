@@ -13,35 +13,62 @@
 </head>
 <script>
 var app = angular.module("myapp", []);
-app.controller("ctrl", test);
+app.controller("OurController", test ,  ['OurResource']);
 
 function test($scope) {
-    $scope.products = [{id:1  , email:"ads"} , {id:1  , email:"ads"} ];
-    $scope.log = function () {
-        console.log($scope.products);
+    var vm = this;
+
+    vm.currentItem = {};
+    vm.currentItem.our_emails = [{ id: 1, email: "ads" }, { id: 1, email: "ads" }];
+
+    $scope.products = [{ id: 1, email: "ads" }, { id: 1, email: "ads" }];
+    vm.log = function() {
+        console.log(vm);
+    }
+    vm.gg = function() {
+        console.log(vm);
+        OurResource.get({}, function(response) {
+            console.log('Н страницу.');
+        }, function() {
+            console.log('Неизвестная ошибка, перезагрузите страницу.');
+        });
     }
 }
+
+app.factory('OurResource', function($resource) {
+    return $resource('/test/angular/dat.js', {id: '@id'}, {
+        'add': {
+            method: 'POST'
+        },
+        'update': {
+            method: 'PUT'
+        }
+    });
+});
 </script>
 
-<body ng-app="myapp" ng-controller="ctrl">
+<body ng-app="myapp" ng-controller="OurController as ctrl" ng-cloak>
     <div class="col-md-3">
         <div class="form-group">
             <label>Электронная почта</label>
             <div class="form-group">
-                <div class="input-group" ng-repeat="email in products">
+                <div class="input-group" ng-repeat="email in ctrl.currentItem.our_emails">
                     <input type="hidden" ng-model="email.id">
                     <input type="email" class="form-control" ng-model="email.email">
                     <span class="input-group-btn">
-                        <button type="button" class="btn btn-default" ng-click="products.splice($index, 1)">
-                            <i class="fa fa-close"></i>
-                        </button>
-                    </span>
+                                <button type="button" class="btn btn-default" ng-click="ctrl.currentItem.our_emails.splice($index, 1);">
+                                    <i class="fa fa-close"></i>
+                                </button>
+                            </span>
                 </div>
-                <button type="button" class="btn btn-default" ng-click="products.push({});">
+                <button type="button" class="btn btn-default" ng-click="ctrl.currentItem.our_emails.push({});">
                     <i class="fa fa-plus"></i> Добавить почту
                 </button>
-                <button type="button" class="btn btn-default" ng-click="log();">
+                <button type="button" class="btn btn-default" ng-click="ctrl.log();">
                     <i class="fa fa-plus"></i> log
+                </button>
+                <button type="button" class="btn btn-default" ng-click="ctrl.gg();">
+                    <i class="fa fa-plus"></i> gg
                 </button>
             </div>
         </div>
