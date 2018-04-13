@@ -9,35 +9,11 @@
     <link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link href="/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="/test/angular/directive/dataRange/lib/daterangepicker.css" rel="stylesheet">
+
     <script type="text/javascript" src="/lib/angular.min.js"></script>
 </head>
-<script>
-var app = angular.module("myapp", []);
-app.controller("OurController", OurController, ['OurResource']);
 
-function OurController($scope, $http) {
-    var vm = this;
-
-    vm.currentItem = {};
-    vm.currentItem.our_emails = [{ id: 1, email: "ads" }, { id: 1, email: "ads" }];
-
-    vm.log = function() {
-        console.log(vm);
-    }
-    vm.gg = function() {
-        $http({
-            method: 'POST',
-            url: '/test/angular/dat.js',
-            data: JSON.stringify({ id: 1 }),
-            headers: { 'Content-Type': undefined }
-        }).then(function(data) {
-            console.log("sucess");
-            console.log((data.data));
-            vm.currentItem.our_emails = data.data;
-        }, function() { console.log('error'); });
-    }
-}
-</script>
 
 <body ng-app="myapp" ng-controller="OurController as ctrl" ng-cloak>
     <div class="col-md-3">
@@ -65,6 +41,17 @@ function OurController($scope, $http) {
             </div>
         </div>
     </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label>Дата отсылки платёжного поручения </label>
+            <input type="text" class="form-control ng-pristine ng-valid ng-empty ng-touched"
+                   ng-model="ctrl.currentItem.date_get_accrual" date-range-picker>
+        </div>
+    </div>
+    <input type="text" name="daterange" value="01/01/2015 - 01/31/2015" />
+
+
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -72,6 +59,16 @@ function OurController($scope, $http) {
     <script src="/lib/popper.min.js"></script>
     <script src="/lib/bootstrap.min.js"></script>
     <script src="/lib/holder.min.js"></script>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/test/angular/directive/dataRange/lib/moment.min.js"></script>
+    <script src="/test/angular/directive/dataRange/lib/daterangepicker.js"></script>
+    <script src="js.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+            $('input[name="daterange"]').daterangepicker();
+        });
+    </script>
 </body>
 
 </html>

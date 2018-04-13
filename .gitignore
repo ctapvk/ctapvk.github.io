@@ -4,19 +4,7 @@
 *.sublime-workspace
 .buildpath
 .project
-
-# Mac DS_Store Files & Win Thumbs.db
-.DS_Store
-Thumbs.db
-<<EOT
-cat <<EOT >> .gitignore
-# development environment
-.idea
-*.sublime-project
-*.sublime-workspace
-.buildpath
-.project
-
+.history
 # Mac DS_Store Files & Win Thumbs.db
 .DS_Store
 Thumbs.db
