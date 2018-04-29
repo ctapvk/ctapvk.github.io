@@ -1,37 +1,12 @@
 var app = angular.module("myapp", []);
 app.controller("OurController", OurController, ['OurResource']);
 
-function OurController($scope, $http) {
-    var vm = this;
-
-    vm.currentItem = {};
-    vm.currentItem.date_get_accrual = "2017-03-03";
-    vm.currentItem.our_emails = [{ id: 1, email: "ads" }, { id: 1, email: "ads" }];
-
-    vm.log = function() {
-        console.log(vm);
-    }
-    vm.gg = function() {
-        $http({
-            method: 'POST',
-            url: '/test/angular/dat.js',
-            data: JSON.stringify({ id: 1 }),
-            headers: { 'Content-Type': undefined }
-        }).then(function(data) {
-            console.log("sucess");
-            console.log((data.data));
-            vm.currentItem.our_emails = data.data;
-        }, function() { console.log('error'); });
-    }
-}
-
-
 app.directive('dateRangePicker', function() {
     return {
         restrict: 'A',
         require: 'ngModel',
         link: function(scope, element, attrs, ngModel) {
-            debugger
+            // debugger
             $(function(){
                 element.daterangepicker({
                     singleDatePicker: true,
@@ -66,6 +41,42 @@ app.directive('dateRangePicker', function() {
         }
     };
 });
+
+
+
+
+function OurController($scope, $http) {
+    var vm = this;
+
+    vm.currentItem = {};
+    vm.currentItem.date_get_accrual = "2017-03-03";
+    vm.currentItem.our_emails = [{ id: 1, email: "ads" }, { id: 1, email: "ads" }];
+
+    vm.log = function() {
+        console.log(vm);
+    }
+    vm.gg = function() {
+        $http({
+            method: 'POST',
+            url: '/test/angular/dat.js',
+            data: JSON.stringify({ id: 1 }),
+            headers: { 'Content-Type': undefined }
+        }).then(function(data) {
+            console.log("sucess");
+            console.log((data.data));
+            vm.currentItem.our_emails = data.data;
+        }, function() { console.log('error'); });
+    }
+}
+
+
+
+
+
+$(function() {
+    $('input[name="daterange"]').daterangepicker();
+});
+
 
 
 
