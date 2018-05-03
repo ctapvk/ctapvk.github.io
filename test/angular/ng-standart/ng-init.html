@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>angular / form </title>
+        <!-- awesome core  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
+
+	    <!-- Bootstrap core CSS -->
+    <link href="/lib/bootstrap.min.css" rel="stylesheet">
+	<script type="text/javascript" src="/lib/angular.min.js"></script>
+</head>
+<body ng-app>
+    <div  >
+        <h3>Пример ng-init AngularJS</h3>
+        <div ng-init="properties=[ {value: 'value1'}, {value: 'value2'}, {value: 'value3'}]">
+            <table>
+                <tr ng-repeat="property in properties">
+                    <td><b>Property [ {{ $index }} ]: {{ property.value }}</b></td>
+                </tr>
+            </table>
+
+        </div>
+        <h3>Еще один способ инициализации объекта </h3>
+        <div ng-init="userName = 'Some User' ; userPass = 333444; email = 'mail@example.com'">
+            <table>
+                <tr>
+                    <td><b>Имя пользователя:</b></td>
+                    <td><input type="text" ng-model="userName"/></td>
+                </tr>
+                <tr>
+                    <td><b>Пароль:</b></td>
+                    <td><input type="number" ng-model="userPass"/></td>
+                </tr>
+                <tr>
+                    <td><b>Email:</b></td>
+                    <td><input type="text" ng-model="email"/></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+
+    <script>
+        angular.module('rangeExample', [])
+          .controller('ExampleController', ['$scope', function($scope) {
+            $scope.value = 75;
+            $scope.min = 10;
+            $scope.max = 90;
+          }]);
+      </script>
+      
+      https://docs.angularjs.org/api/ng/input/input%5Brange%5D
+      <form name="myForm" ng-app="rangeExample" ng-controller="ExampleController">
+      
+        Model as range: <input type="range" name="range" ng-model="value" min="{{min}}"  max="{{max}}">
+        <hr>
+        Model as number: <input type="number" ng-model="value"><br>
+        Min: <input type="number" ng-model="min"><br>
+        Max: <input type="number" ng-model="max"><br>
+        value = <code>{{value}}</code><br/>
+        myForm.range.$valid = <code>{{myForm.range.$valid}}</code><br/>
+        myForm.range.$error = <code>{{myForm.range.$error}}</code>
+      </form>
+
+      <div ng-app >
+            <label>Name:</label>
+            <input type="text" ng-model="yourName" placeholder="Enter a name here">
+            <hr>
+            <h1>Hello {{yourName}}!</h1>
+          </div>
+          
+        </body>
+
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/lib/jquery-3.2.1.slim.min.js"></script> 
+    <script src="/lib/popper.min.js"></script>
+    <script src="/lib/bootstrap.min.js"></script>
+    <script src="/lib/holder.min.js"></script>
+</body>
+</html>
