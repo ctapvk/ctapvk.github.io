@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>moment</title>
+    <!-- awesome core  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/lib/bootstrap.min.css" rel="stylesheet">
+
+<!--
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+-->
+
+    <link rel="stylesheet" type="text/css" href="/lib/datapicker/daterangepicker.css" />
+
+
+
+
+</head>
+
+<body>
+
+<input type="text" name="dates" id="">
+<input type="text" name="birthday" id="">
+<div class="text"></div>
+
+
+<!-- Placed at the end of the document so the pages load faster -->
+    <script src="/lib/jquery-3.2.1.slim.min.js"></script>
+    <script src="/lib/popper.min.js"></script>
+    <script src="/lib/bootstrap.min.js"></script>
+    <script src="/lib/holder.min.js"></script>
+
+<script type="text/javascript" src="/lib/datapicker/moment.min.js"></script>
+<script type="text/javascript" src="/lib/datapicker/moment.ru.js"></script>
+<script type="text/javascript" src="/lib/datapicker/daterangepicker.js"></script>
+
+
+<script>
+    $('input[name="dates"]').daterangepicker({
+        startDate: moment("1993-04-11"),
+        endDate: moment(),
+        "autoApply": true,
+        autoUpdateInput: true,
+        locale: {
+            format: 'DD.MM.YYYY',
+            "applyLabel": "Применить",
+            "cancelLabel": "Отмена",
+        }
+
+    }, calc );
+
+    function calc(start, end, label) {
+        $(".text").html("<br> My age is  " + moment(end).diff(start, 'days') + " days!");
+        $(".text").append("<br> My age is  " + moment(end).diff(start, 'months') + " months!");
+        $(".text").append("<br> My age is  " + moment(end).diff(start, 'years') + " years!");
+    }
+
+    calc($('input[name="dates"]').data('daterangepicker').startDate , $('input[name="dates"]').data('daterangepicker').endDate ) ;
+
+
+    // $('input[name="dates"]').daterangepicker('updateView');
+    // $('input[name="dates"]').element.trigger('show.daterangepicker', $('input[name="dates"]'));
+    // $('input[name="dates"]').daterangepicker('setStartDate', "01-01-1900");
+
+    $('input[name="birthday"]').daterangepicker({
+        singleDatePicker: true,
+        maxYear: moment().format('YYYY') ,
+        showDropdowns: true,
+        minYear: 1901,
+        locale: {
+            format: 'DD.MM.YYYY'
+        },
+    }, function (start, end, label) {
+        var years = moment().diff(start, 'years');
+        alert("You are " + years + " years old!");
+    });
+</script>
+
+
+</body>
+
+</html>

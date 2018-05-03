@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>angular / form </title>
+    <!-- awesome core  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/lib/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="/lib/angular.min.js"></script>
+</head>
+<script>
+var app = angular.module("myapp", []);
+app.controller("OurController", test ,  ['OurResource']);
+
+data = {"subject":{"id":1,"obligation_status_id":1,"right_type_id":1,"granting_type_id":1,"basis_doc_id":1,"our_id":1,"our_agent_id":1,"our_bank_detail_id":1,"transfer_act":"1","date_transfer":"2018-03-21","date_transfer_signature":"2018-03-21","transfer_act_return":"1","date_transfer_return":"2018-03-21","date_transfer_return_signature":"2018-03-21","egrp":false,"date_egrp":"2018-03-21","egrp_number":null,"payment_value":null,"date_start":"2018-03-21","agreement_expiration_type_id":1,"date_end":"2018-03-21","date_end_current":"2018-03-21","payment_frequency_id":1,"date_payment_deadline_first":"2018-03-21","calculating_method_id":1,"penalty_forming_method_id":null,"payment_deadline_day":null,"clause":null,"payment_form_id":null,"compliance_clause_purpose_coefficient_id":null,"balance_holder_id":null,"balance_holder_agent_id":null,"balance_holder_bank_id":null,"title":"Постановление №1230984567 от 02.05.2017","obligation_subjects":[{"id":1,"subject_id":1,"obligation_id":1,"subject_agent_id":null,"subject_bank_id":null,"payment_value":null,"enabled":false,"subject":{"id":1,"subject_type_id":1,"legal_address_id":5,"postal_address_id":6,"our_id":1,"created_at":"2018-04-02 21:44:56","updated_at":"2018-04-02 21:44:56","title":"Тестовый ЮЛ","inn":"1111111111","type_title":"ЮЛ","subject_banks":[{"id":1,"subject_id":1,"bank_id":1,"rs":"12123112312312312999","enabled":true,"created_at":"2018-04-02 21:44:56","updated_at":"2018-04-02 21:44:56","title":"ПАО Банк Кузнецкий; р/с: 12123112312312312999","bank":{"id":1,"name":"ПАО Банк Кузнецкий","full_name":"ПАО Банк Кузнецкий","cor_bank_account":"37492837463928374652","bik":"123482837","deleted_at":null}}],"legal_address":{"id":5,"title":"ул Пушкина, дом Колотушкина","corpus":null,"housing":"23","apartment":null,"room":null,"title_full":"ул Пушкина, дом Колотушкина, д. 23"},"subject_agents":[{"id":1,"subject_id":1,"agent_type_id":1,"surname":"Тестов","firstname":"Тест","patronymic":null,"position":"Представитель","enabled":true,"email":"","created_at":"2018-04-02 21:44:56","updated_at":"2018-04-02 21:44:56","title":"Тестов Тест  - Представитель"}],"subject_individual":null,"subject_private":null,"subject_legal_entity":{"id":1,"full_name":"Тестовый ЮЛ","short_name":null,"inn":"1111111111","kpp":"222222222","ogrn":"3333333333333","ul_nomer":null,"ul_serial":null,"name_reg_organ":null,"okved":null,"okpo":null,"reg_date":"2017-07-11","resident":true,"created_at":"2018-04-02 21:44:56","updated_at":"2018-04-02 21:44:56"},"subject_type":{"id":1,"name":"ЮЛ","created_at":null,"updated_at":null}},"subject_agent":null,"subject_bank":null,"$$hashKey":"object:12"}],"obligation_objects":[],"obligation_object_subject_relations":[],"precede_docs":[],"basis_doc":{"id":1,"basis_doc_type_id":3,"date":"2017-05-02","number":"1230984567","issued_by":"Правительство Пензенской области","content":null,"enabled":true,"file_id":null,"our_id":null,"title":"Постановление №1230984567 от 02.05.2017","filename":"","basis_doc_type":{"id":3,"name":"Постановление"},"file":null},"our":{"id":1,"full_name":"Муниципалитет города Тында","name":"МГТ","inn":"1231231231","kpp":"345345345","ogrn":"2141241241241","okved":null,"okpo":null,"okogu":null,"okfs":null,"okopf":null,"date_reg":"2017-02-08","created_at":"2018-04-02 21:44:56","updated_at":"2018-04-02 21:44:56","legal_address_id":1,"postal_address_id":2,"tofk_id":null,"urn":null,"title":"МГТ","legal_address":{"id":1,"title":"ул Пушкина, дом Колотушкина","corpus":null,"housing":"23","apartment":null,"room":null,"title_full":"ул Пушкина, дом Колотушкина, д. 23","fias":[]},"our_agents":[{"id":1,"agent_type_id":1,"surname":"Дорогой","name":"Василий","patronymic":"Петрович","position":"Начальник","is_user":true,"enabled":true,"email":"vasya@ya.ru","our_id":1,"deleted_at":null,"title":"Дорогой Василий Петрович - Начальник"}],"our_bank_details":[{"id":1,"our_id":1,"bank_id":1,"rs":"12123112312312312999","title":"ПАО Банк Кузнецкий; р/с: 12123112312312312999","bank":{"id":1,"name":"ПАО Банк Кузнецкий","full_name":"ПАО Банк Кузнецкий","cor_bank_account":"37492837463928374652","bik":"123482837","deleted_at":null}}]},"our_agent":{"id":1,"agent_type_id":1,"surname":"Дорогой","name":"Василий","patronymic":"Петрович","position":"Начальник","is_user":true,"enabled":true,"email":"vasya@ya.ru","our_id":1,"deleted_at":null,"title":"Дорогой Василий Петрович - Начальник"},"our_bank_detail":{"id":1,"our_id":1,"bank_id":1,"rs":"12123112312312312999","title":"ПАО Банк Кузнецкий; р/с: 12123112312312312999","bank":{"id":1,"name":"ПАО Банк Кузнецкий","full_name":"ПАО Банк Кузнецкий","cor_bank_account":"37492837463928374652","bik":"123482837","deleted_at":null}},"obligation_status_states":[],"balance_holder":null,"balance_holder_agent":null,"balance_holder_bank":null}};
+
+function test($scope) {
+    var vm = this;
+
+    vm.currentItem = {};
+    vm.currentItem.currentSubject2 = data ;
+
+    vm.log = function(){
+        console.log(123);
+    }
+    vm.sel = function(){
+        console.log(vm.currentItem.select_subject_obj);
+    }
+
+}
+
+</script>
+
+<body ng-app="myapp" ng-controller="OurController as ctrl" ng-cloak>
+
+    
+    <div class="col-md-6">
+        <div class="form-group">
+            <label>Субъект *</label> <a ng-click="ctrl.log()" class="btn btn-primary">log</a>
+                <select class="form-control 
+                ng-touched ng-dirty ng-valid-parse ng-not-empty ng-valid ng-valid-required" 
+                ng-model="ctrl.currentItem.select_subject_obj" 
+                ng-change="ctrl.sel()"
+                ng-options="dat.subject.title for dat in ctrl.currentItem.currentSubject2.subject.obligation_subjects" 
+                required="">
+                <option value="" class="">- Выберите вид -</option>
+            </select>
+            <input type="hidden" class="form-control ng-pristine ng-untouched ng-valid ng-not-empty" ng-model="ctrl.currentItem.accrual_obligation_subject_number" autocomplete="off">
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/lib/jquery-3.2.1.slim.min.js"></script>
+    <script src="/lib/popper.min.js"></script>
+    <script src="/lib/bootstrap.min.js"></script>
+    <script src="/lib/holder.min.js"></script>
+</body>
+
+</html>
