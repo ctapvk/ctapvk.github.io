@@ -25,6 +25,11 @@ function test($scope) {
 
     vm.log = function(){
         console.log(123);
+        console.log(vm.currentItem);
+    }
+    vm.set = function(){
+        console.log(vm.currentItem);
+        vm.currentItem.select_subject_obj=vm.currentItem.currentSubject2.subject.obligation_subjects[0];
     }
     vm.sel = function(){
         console.log(vm.currentItem.select_subject_obj);
@@ -39,8 +44,10 @@ function test($scope) {
     
     <div class="col-md-6">
         <div class="form-group">
-            <label>Субъект *</label> <a ng-click="ctrl.log()" class="btn btn-primary">log</a>
-                <select class="form-control 
+            <label>Субъект *</label>
+            <a ng-click="ctrl.log()" class="btn btn-primary">log</a>
+            <a ng-click="ctrl.set()" class="btn btn-primary">set</a>
+                <select class="form-control
                 ng-touched ng-dirty ng-valid-parse ng-not-empty ng-valid ng-valid-required" 
                 ng-model="ctrl.currentItem.select_subject_obj" 
                 ng-change="ctrl.sel()"
