@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>angular / form </title>
+    <!-- awesome core  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/lib/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="/lib/angular.min.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="OurController as ctrl" ng-cloak>
+
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <div class="form-group">
+            <input type="text" class="form-control" value="asd" ng-model="ctrl.test">
+        </div>
+        <a href="" class="btn btn-primary" type="button" ng-click="ctrl.log()">log</a>
+
+        <table class="table table-striped jambo_table" border="1">
+            <thead>
+            <tr class="headings">
+                <th class="column-title">№ </th>
+                <th class="column-title">Название</th>
+                <th class="column-title">Цена</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr ng-repeat="item in ctrl.items" ng-click="ctrl.edit(item)" ng-dblclick="ctrl.edit(item, true)">
+                <td ng-bind="item.id"></td>
+                <td ng-bind="item.name"></td>
+                <td ng-bind="item.price"></td>
+            </tr>
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-primary" ng-click="ctrl.add()">Добавить</button>
+
+    </div>
+    <div class="col-md-1"></div>
+</div>
+
+
+
+
+<!-- "modal" -->
+<div id="obligationModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <h4 class="modal-title">
+                    Выберите обязательство
+                </h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form class="form-horizontal" ng-submit="ctrl.submitObligation()" autocomplete="off" onsubmit="return false">
+                <div class="modal-body">
+                    <div class="form-group row" >
+                        <label class="col-md-4 control-label">Название</label>
+                        <div class="col-md-8">
+                            <input type="text"  class="form-control" ng-model="ctrl.data.name">
+                        </div>
+                    </div>
+
+                    <div class="form-group row" >
+                        <label class="col-md-4 control-label">Цена</label>
+                        <div class="col-md-8">
+                            <input type="text"  class="form-control" ng-model="ctrl.data.price" >
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" ng-click="ctrl.save()">Сохранить</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- "modal" -->
+
+
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/lib/jquery-3.2.1.slim.min.js"></script>
+<script src="/lib/popper.min.js"></script>
+<script src="/lib/bootstrap.min.js"></script>
+<script src="/lib/holder.min.js"></script>
+<script src="js.js"></script>
+
+</body>
+</html>
