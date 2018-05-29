@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>angular / table </title>
+        <!-- awesome core  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
+
+	    <!-- Bootstrap core CSS -->
+    <link href="/lib/bootstrap.min.css" rel="stylesheet">
+</head>
+<body ng-app='myapp' ng-controller="OurController as ctrl" ng-cloak >
+    <table  class="table table-bordered table-striped table-hover">
+        <thead>
+        <tr class="headings">
+            <th>№</th>
+
+            <th>Статус</th>
+            <th>УИН</th>
+            <th>Период</th>
+
+            <th>Сумма начисленной арендной платы</th>
+            <th>Дата формирования</th>
+            <th>Предельный срок оплаты</th>
+
+            <th>Плательщик</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr ng-repeat="item in ctrl.acc" >
+            <td ng-bind="::item.id"></td>
+
+            <td ng-bind="::item.accrual_statuses.name"></td>
+            <td ng-bind="::item.yin"></td>
+            <td  >с {{ item.period_start | dateTime:'DD.MM.YYYY' }} по {{item.period_end | dateTime:'DD.MM.YYYY' }}</td>
+
+            <td ng-bind="::item.accruals_sum"></td>
+            <td >{{item.date_created | dateTime:'DD.MM.YYYY' }}</td>
+            <td >до {{item.period_end | dateTime:'DD.MM.YYYY' }}</td>
+
+            <td ng-bind="::item.subject"></td>
+        </tr>
+        </tbody>
+    </table>
+
+	
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/lib/jquery-3.2.1.slim.min.js"></script> 
+    <script src="/lib/popper.min.js"></script>
+    <script src="/lib/bootstrap.min.js"></script>
+    <script src="/lib/holder.min.js"></script>
+    <script src="/lib/moment.min.js"></script>
+
+    <script type="text/javascript" src="/lib/angular.min.js"></script>
+    <script type="text/javascript">
+var moduleApp = angular.module("myapp", []);
+moduleApp.controller("OurController", OurController );
+
+moduleApp.filter('dateTime', function() {
+    return function (input, format) {
+        if(!format) format = 'DD.MM.YYYY HH:mm:ss';
+        if(format == 'Y-m-d H:i:s') format = 'DD.MM.YYYY HH:mm:ss';
+        if(format == 'Y-m-d') format = 'DD.MM.YYYY';
+
+        return input ? moment(input).format(format) : '';
+    }
+});
+
+function OurController($scope ) {
+    var vm = this ;
+    vm.acc = [{"id":15,"obligation_subject_id":3,"accrual_types_id":1,"accruals_sum":"10.65","period_start":"2018-03-21","period_end":"2018-03-31","yin":"1111111111111111111111111","residual":"10.65","payment_destination":"Аренда  Постановление №1230984567 от 02.05.2017 Физ лицо 2 Степан Иванович","accrual_states_id":1,"subject":"Физ лицо 2 Степан Иванович","payer_id":"1010000000003412785634","accrual_statuses_id":2,"accrual_id":null,"date_get_accrual":"2018-05-28","date_actual_accrual":"2018-03-21","date_created":"2018-03-21","date_limit_accrual":"2018-03-21","payment_reason":null,"payment_type":null,"created_at":"2018-05-28 16:05:32","updated_at":"2018-05-28 16:05:32","autofill":true,"obligation_id":2,"accrual_statuses":{"id":2,"name":"Действующее"},"$$hashKey":"object:102"},{"id":16,"obligation_subject_id":4,"accrual_types_id":1,"accruals_sum":"10.65","period_start":"2018-03-21","period_end":"2018-03-31","yin":"1111111111111111111111111","residual":"10.65","payment_destination":"Аренда  Постановление №1230984567 от 02.05.2017 Тестовый ЮЛ","accrual_states_id":1,"subject":"Тестовый ЮЛ","payer_id":"2001111111111222222222","accrual_statuses_id":2,"accrual_id":null,"date_get_accrual":"2018-05-28","date_actual_accrual":"2018-03-21","date_created":"2018-03-21","date_limit_accrual":"2018-03-21","payment_reason":null,"payment_type":null,"created_at":"2018-05-28 16:05:32","updated_at":"2018-05-28 16:05:32","autofill":true,"obligation_id":2,"accrual_statuses":{"id":2,"name":"Действующее"},"$$hashKey":"object:103"},{"id":17,"obligation_subject_id":3,"accrual_types_id":1,"accruals_sum":"30.00","period_start":"2018-04-01","period_end":"2018-04-30","yin":"1111111111111111111111111","residual":"30.00","payment_destination":"Аренда  Постановление №1230984567 от 02.05.2017 Физ лицо 2 Степан Иванович","accrual_states_id":1,"subject":"Физ лицо 2 Степан Иванович","payer_id":"1010000000003412785634","accrual_statuses_id":2,"accrual_id":null,"date_get_accrual":"2018-05-28","date_actual_accrual":"2018-04-01","date_created":"2018-04-01","date_limit_accrual":"2018-04-01","payment_reason":null,"payment_type":null,"created_at":"2018-05-28 16:05:32","updated_at":"2018-05-28 16:05:32","autofill":true,"obligation_id":2,"accrual_statuses":{"id":2,"name":"Действующее"},"$$hashKey":"object:104"},{"id":18,"obligation_subject_id":4,"accrual_types_id":1,"accruals_sum":"30.00","period_start":"2018-04-01","period_end":"2018-04-30","yin":"1111111111111111111111111","residual":"30.00","payment_destination":"Аренда  Постановление №1230984567 от 02.05.2017 Тестовый ЮЛ","accrual_states_id":1,"subject":"Тестовый ЮЛ","payer_id":"2001111111111222222222","accrual_statuses_id":2,"accrual_id":null,"date_get_accrual":"2018-05-28","date_actual_accrual":"2018-04-01","date_created":"2018-04-01","date_limit_accrual":"2018-04-01","payment_reason":null,"payment_type":null,"created_at":"2018-05-28 16:05:32","updated_at":"2018-05-28 16:05:32","autofill":true,"obligation_id":2,"accrual_statuses":{"id":2,"name":"Действующее"},"$$hashKey":"object:105"},{"id":19,"obligation_subject_id":3,"accrual_types_id":1,"accruals_sum":"30.00","period_start":"2018-05-01","period_end":"2018-05-31","yin":"1111111111111111111111111","residual":"30.00","payment_destination":"Аренда  Постановление №1230984567 от 02.05.2017 Физ лицо 2 Степан Иванович","accrual_states_id":1,"subject":"Физ лицо 2 Степан Иванович","payer_id":"1010000000003412785634","accrual_statuses_id":2,"accrual_id":null,"date_get_accrual":"2018-05-28","date_actual_accrual":"2018-05-01","date_created":"2018-05-01","date_limit_accrual":"2018-05-01","payment_reason":null,"payment_type":null,"created_at":"2018-05-28 16:05:32","updated_at":"2018-05-28 16:05:32","autofill":true,"obligation_id":2,"accrual_statuses":{"id":2,"name":"Действующее"},"$$hashKey":"object:106"},{"id":20,"obligation_subject_id":4,"accrual_types_id":1,"accruals_sum":"30.00","period_start":"2018-05-01","period_end":"2018-05-31","yin":"1111111111111111111111111","residual":"30.00","payment_destination":"Аренда  Постановление №1230984567 от 02.05.2017 Тестовый ЮЛ","accrual_states_id":1,"subject":"Тестовый ЮЛ","payer_id":"2001111111111222222222","accrual_statuses_id":2,"accrual_id":null,"date_get_accrual":"2018-05-28","date_actual_accrual":"2018-05-01","date_created":"2018-05-01","date_limit_accrual":"2018-05-01","payment_reason":null,"payment_type":null,"created_at":"2018-05-28 16:05:32","updated_at":"2018-05-28 16:05:32","autofill":true,"obligation_id":2,"accrual_statuses":{"id":2,"name":"Действующее"},"$$hashKey":"object:107"}];
+
+};
+
+
+    </script>
+</body>
+</html>
