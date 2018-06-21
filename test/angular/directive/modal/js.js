@@ -11,16 +11,17 @@ function OurController($scope, $http) {
     ]
 
     vm.items= [
-        {id:1 , "name":"Апельсин" , "price":"37.2" } ,
+        {id:1 , "name":"Апельсин" , "price":"37,2" } ,
         ];
 
     vm.log = function() {
         console.log(vm);
     }
 
-    vm.edit = function(item) {
-        console.log(item);
-        vm.data = angular.copy(item);;
+    vm.edit = function(item , i) {
+        console.log(item ) ;
+        vm.index=i;
+        vm.data = angular.copy(item);
         $('#obligationModal').modal();
     }
 
@@ -32,10 +33,11 @@ function OurController($scope, $http) {
 
     vm.save = function() {
         // Запись в массив
-        if (vm.index === null)
+        if (vm.index === null) {
             vm.items.push(vm.data);
-        else
-            vm.items[vm.currentSubjectIndex] = vm.data;
+        } else {
+            vm.items[vm.index] = vm.data;
+        }
         $('#obligationModal').modal('hide');
     }
 
