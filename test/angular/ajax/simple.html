@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>angular / blade </title>
+        <!-- awesome core  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
+	    <!-- Bootstrap core CSS -->
+    <link href="/lib/bootstrap.min.css" rel="stylesheet"> 
+</head>
+<body>
+	<div ng-app='myapp' ng-controller="OurController as ctrl" ng-cloak >
+        <button class="btn btn-primary" ng-click="ctrl.ajaxReq()">Отправить аякс запрос</button>
+    </div>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/lib/jquery-3.2.1.slim.min.js"></script> 
+    <script src="/lib/popper.min.js"></script>
+    <script src="/lib/bootstrap.min.js"></script>
+    <script src="/lib/holder.min.js"></script>
+
+    <script type="text/javascript" src="/lib/angular.min.js"></script>
+    <script type="text/javascript">
+        var app = angular.module("myapp", []);
+        app.controller("OurController", OurController );
+
+        function OurController($scope, $http) {
+            var vm = this;
+            vm.ajaxReq = function() {
+                var formData = {'data': 'test' ,
+                    "ajax":1
+                };
+                var req = { method: 'POST',  headers: { 'Content-Type': undefined  },
+                    url: 'simple.dat',
+                    data:formData
+                }
+                $http(req).then(
+                    function(d){console.log("sucess" , d ); alert(d.data);},
+                    function(d){console.log('error' ,d ); alert(d.data);}
+                );
+            }
+        }
+
+    </script>
+</body>
+</html>
