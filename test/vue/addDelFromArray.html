@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap/form </title>
+    <!-- awesome core  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/lib/bootstrap.min.css" rel="stylesheet">
+    <script src="/lib/vue/vuedev.js"></script>
+
+</head>
+
+<body>
+
+<div id="app">
+  <h1>Finds</h1>
+  <div v-for="(find, index) in finds">
+    <input v-model="find.value">
+    <button @click="deleteFind(index)">
+      delete
+    </button>
+  </div>
+  
+  <button @click="addFind">
+    New Find
+  </button>
+  
+  <pre>{{ $data }}</pre>
+</div>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/lib/jquery-3.2.1.slim.min.js"></script>
+    <script src="/lib/popper.min.js"></script>
+    <script src="/lib/bootstrap.min.js"></script>
+    <script src="/lib/holder.min.js"></script>
+
+    <script>
+new Vue({
+  el: '#app',
+  data: {
+    finds: [] 
+  },
+  methods: {
+    addFind: function () {
+      this.finds.push({ value: 'def' });
+    },
+    deleteFind: function (index) {
+      console.log(index);
+      console.log(this.finds);
+      this.finds.splice(index, 1);
+    },
+    // можно и так https://vuejs.org/v2/api/#Vue-delete 
+    // https://medium.com/vuejs-tips/tip-3-deleting-array-index-in-vue-js-8cc31d7214bf
+    remove (index) {
+     this.$delete(this.finds, index)
+    }
+  }
+});        
+    </script>
+</body>
+
+</html>

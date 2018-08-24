@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap/form </title>
+    <!-- awesome core  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/lib/bootstrap.min.css" rel="stylesheet">
+    <script src="/lib/vue/vuedev.js"></script>
+</head>
+
+<body>
+    <button id="toc" class="btn btn-primary col-md-3" data-toggle="modal" data-target="#exampleModalCenter">Создать новое обращение</button>
+    <div id="app">
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h3 class="modal-title w-100">НОВОЕ ОБРАЩЕНИЕ</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-md-6 ">
+                            <form v-on:submit="validateForm" >
+                                <div class="form-group">
+                                    <label for="inpuTema" class="font-weight-bold">Тема</label>
+                                    <select id="inpuTema" class="form-control modal-textarea"
+                                            v-model="type" v-bind:class="{ 'is-invalid': attemptSubmit && missingType }">
+                                        <option value="1">Статус груза</option>
+                                    </select>
+                                    <div class="invalid-feedback">Обязательное поле</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputText" class="font-weight-bold">Текст обращения</label>
+                                    <textarea type="text" class="form-control modal-textarea" id="inputText"
+                                              v-model="tema" v-bind:class="{ 'is-invalid': attemptSubmit && missingTema }"
+                                    ></textarea>
+                                    <div class="invalid-feedback">Обязательное поле</div>
+                                </div>
+                                <div style="display: none;">
+                                    <label>Files
+                                        <input type="file" id="files" ref="files" multiple v-on:change="handleFilesUpload()" />
+                                    </label>
+                                </div>
+                                <div v-for="(file, index) in files">
+                                    <span>{{file.name}}</span>
+                                    <span>{{file.size}} </span>
+                                    <button type="button" @click="deleteItem(index)" class="close" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div onclick="">
+                                    <span class="send-mess-file-pic"></span>
+                                    <span class="send-mess-file-label" @click="addItem()">Прикрепить файл</span>
+                                    <span class="send-mess-file-label-max" v-if="fileIsMoreThen2Mb">Файл не должен быть больше 5 мб</span>
+                                </div>
+                                <br>
+                                <div class="max-file-count">до 5 файлов размером не более 2 мб каждый</div>
+                                <br>
+                                <button type="submit" class="btn btn-primary col-md-6" >Отправить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/lib/jquery-3.2.1.slim.min.js"></script>
+    <script src="/lib/popper.min.js"></script>
+    <script src="/lib/bootstrap.min.js"></script>
+    <script src="/lib/holder.min.js"></script>
+    <script>
+    $(function() {
+        $("#toc").click();
+    })
+    var app = new Vue({
+        el: '#app',
+        methods: {
+            addItem() {
+                if (this.files.length < 5) {
+                    this.$refs.files.click();
+                }
+                this.fileIsMoreThen2Mb = false;
+            },
+            handleFilesUpload() {
+                let uploadedFiles = this.$refs.files.files;
+
+                for (var i = 0; i < uploadedFiles.length; i++) {
+                    var ob = uploadedFiles[i];
+                    if (ob.size > (1000 * 1000 * 2)) {
+                        this.fileIsMoreThen2Mb = true;
+                        return;
+                    }
+                    if (ob.name.length > 20) {
+                        fileName = ob.name.substr(0, 10) + "..." + ob.name.substr(ob.name.length - 10, ob.name.length);
+                    } else {
+                        fileName = ob.name;
+                    }
+                    if (ob.size <= 1000)
+                        fileSize = (ob.size).toFixed(1) + " байт";
+                    else if (ob.size > 1000 && ob.size < 1000 * 1000)
+                        fileSize = (ob.size / 1000).toFixed(1) + " кб";
+                    else
+                        fileSize = (ob.size / (1000 * 1000)).toFixed(1) + " мб";
+
+                    this.files.push({
+                        "name": fileName,
+                        "size": fileSize,
+                    });
+                }
+            },
+            deleteItem: function(event) {
+                this.files.splice(this.files.indexOf(event), 1);
+            },
+
+            isNumeric: function(n) {
+                return !isNaN(parseFloat(n)) && isFinite(n);
+            },
+
+            validateForm: function(event) {
+                this.attemptSubmit = true;
+                if (this.missingType || this.missingTema)
+                    event.preventDefault();
+                    event.preventDefault();
+            },
+        },
+        computed: {
+            missingType: function() { return this.type === ''; },
+            missingTema: function() { return this.tema === ''; },
+            missingTema2: function() {
+                return (
+                    this.isNumeric(this.number) === false ||
+                    this.number < 1 ||
+                    this.number > 10
+                )
+            },
+        },
+        data: {
+            files: [],
+            fileIsMoreThen2Mb: false,
+            type: '',
+            tema: '',
+            attemptSubmit: false,
+        },
+    })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap/form </title>
+    <!-- awesome core  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/lib/bootstrap.min.css" rel="stylesheet">
+    <script src="/lib/vue/vuedev.js"></script>
+
+</head>
+
+<body>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/lib/jquery-3.2.1.slim.min.js"></script>
+    <script src="/lib/popper.min.js"></script>
+    <script src="/lib/bootstrap.min.js"></script>
+    <script src="/lib/holder.min.js"></script>
+
+
+<style>
+  input[type="file"]{
+    position: absolute;
+    top: -500px;
+  }
+
+  div.file-listing{
+    width: 200px;
+  }
+
+  span.remove-file{
+    color: red;
+    cursor: pointer;
+    float: right;
+  }
+</style>
+
+<div id="app">
+
+  <div class="container">
+    <div class="large-12 medium-12 small-12 cell">
+      <label>Files
+        <input type="file" id="files" ref="files" multiple v-on:change="handleFilesUpload()"/>
+      </label>
+    </div>
+    <div class="large-12 medium-12 small-12 cell">
+      <div v-for="(file, key) in files" class="file-listing">
+          {{ file.name }}
+          <span class="remove-file" v-on:click="removeFile( key )">Remove</span>
+      </div>
+    </div>
+    <br>
+    <div class="large-12 medium-12 small-12 cell">
+      <button v-on:click="addFiles()">Add Files</button>
+    </div>
+    <br>
+    <div class="large-12 medium-12 small-12 cell">
+      <button v-on:click="submitFiles()">Submit</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  var app = new Vue({
+    el: '#app',    
+    data: {
+      files: []
+    },
+    methods: {
+      /*
+        Adds a file
+      */
+      addFiles(){
+        this.$refs.files.click();
+      },
+
+      /*
+        Submits files to the server
+      */
+      submitFiles(){
+        /*
+          Initialize the form data
+        */
+        let formData = new FormData();
+
+        /*
+          Iteate over any file sent over appending the files
+          to the form data.
+        */
+        for( var i = 0; i < this.files.length; i++ ){
+          let file = this.files[i];
+
+          formData.append('files[' + i + ']', file);
+        }
+
+        /*
+          Make the request to the POST /select-files URL
+        */
+        axios.post( '/select-files',
+          formData,
+          {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+          }
+        ).then(function(){
+          console.log('SUCCESS!!');
+        })
+        .catch(function(){
+          console.log('FAILURE!!');
+        });
+      },
+
+      /*
+        Handles the uploading of files
+      */
+      handleFilesUpload(){
+        let uploadedFiles = this.$refs.files.files;
+
+        /*
+          Adds the uploaded file to the files array
+        */
+        for( var i = 0; i < uploadedFiles.length; i++ ){
+            debugger;
+            if (uploadedFiles[i].size > (1024*2)) {
+                return;
+            }
+          this.files.push( uploadedFiles[i] );
+        }
+      },
+
+      /*
+        Removes a select file the user has uploaded
+      */
+      removeFile( key ){
+        this.files.splice( key, 1 );
+      }
+    }
+  })
+</script>
+
+</body>
+
+</html>
