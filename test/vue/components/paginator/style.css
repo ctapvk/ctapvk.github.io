@@ -1,0 +1,49 @@
+.mypagination {
+    display: inline-block;
+    color: #0a246a;
+}
+
+.mypagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-top: 2px solid grey;
+}
+
+.mypagination a.active {
+    color: red;
+    border-top: 2px solid red;
+
+}
+
+.mypagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.mypagination a.next {
+    position: relative;
+    width: 150px;
+    padding-right: 20px;
+}
+
+.mypagination .rigth-arrow {
+    top: -16px;
+    font-size: 42px;
+    position: absolute;
+}
+
+.mypagination a.prev {
+    position: relative;
+    width: 150px;
+    padding-left: 40px;
+
+}
+
+.mypagination .left-arrow {
+    font-size: 42px;
+    position: absolute;
+    right: 14px;
+    left: 0px;
+    top: -16px;
+}

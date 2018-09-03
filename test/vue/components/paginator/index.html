@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap/form </title>
+    <!-- awesome core  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/lib/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="app">
+    <div class="mess">
+        <div class="mess-item" v-for="todo in data.data">
+            <div class="mess-item-left">
+                <div class="mess-date">{{ todo.date }}</div>
+                <div class="mess-new" v-if="todo.messagesNew > 0">
+                    Новых сообщений: {{ todo.messagesNew }}
+                </div>
+                <div class="mess-total" v-else>Сообщений: {{ todo.messagesTotal }}</div>
+            </div>
+            <div class="mess-item-right">
+                <div class="mess-text">{{ todo.text }}</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mypagination" v-if="data.total > data.per_page">
+        <a class=""
+           v-if="data.current_page !=1"
+           @click.prevent="selectPage(1)"
+        > Первая </a>
+        <a class="prev"
+           v-if="data.current_page !=1"
+           @click.prevent="selectPage(--data.current_page)"
+        >
+            <slot name="prev-nav">Предыдущая <span class="left-arrow">&#8592;</span></slot>
+        </a>
+
+        <a v-for="n in getPages()"
+           :class="{ 'active': n == data.current_page }"
+           @click.prevent="selectPage(n)"
+        >{{ n }}</a>
+
+        <a class="next"
+           v-if="data.current_page !=data.last_page"
+           @click.prevent="selectPage(++data.current_page)"
+        >
+            <slot name="next-nav">Следующая <span class="rigth-arrow">&#8594;</span></slot>
+        </a>
+        <a class=""
+           v-if="data.current_page !=data.last_page"
+           @click.prevent="selectPage(data.last_page)"
+        >
+            Последняя (<b>{{ data.last_page }}</b>)
+        </a>
+    </div>
+
+    <span v-else=""> Нет данных </span>
+
+</div>
+
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/lib/jquery-3.2.1.slim.min.js"></script>
+<script src="/lib/bootstrap.min.js"></script>
+<script src="/lib/vue/axios.min.js"></script>
+<script src="/lib/vue/vuedev.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>
