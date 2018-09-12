@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .mainselection {
+            border: 0 none;
+            font-size: 20px;
+            padding: 10px;
+            padding-right: 40px;
+            /* убираем стрелку */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+
+            overflow: hidden;
+            /*background: url("arrow_drop_down.png") no-repeat scroll 92% 50% #EDEDED;*/
+            background: transparent;
+            background-image: url(arrow_drop_down.png);
+            background-position-x: 92%;
+            background-position-y: 50%;
+            background-repeat-x: no-repeat;
+            background-repeat-y: no-repeat;
+            background-attachment: scroll;
+            background-color: #EDEDED;
+        }
+
+        .mainselection:active {
+            background-image: url(arrow_drop_up.png);
+        }
+
+    </style>
+</head>
+
+<body>
+<div id="mainselection">
+    <select>
+        <option>Select an Option</option>
+        <option>Option 1</option>
+        <option>Option 2</option>
+    </select>
+</div>
+<h4>
+    Сортировка :
+
+    <select name="sort" class="mainselection">
+        <option value="1">По дате</option>
+        <option value="2" selected="">Дешевле</option>
+        <option value="3">Дороже</option>
+    </select>
+    <img style="min-width: 100px;">
+    Районы :
+    <select name="distincts" class="mainselection">
+        <option value="0">любой район</option>
+        <option value="1">Заельцовский</option>
+        <option value="2">Октябрьский</option>
+        <option value="3">Первомайский</option>
+        <option value="4">Ленинский</option>
+        <option value="5">Железнодорожный</option>
+    </select>
+
+</h4>
+</body>
+
+</html>

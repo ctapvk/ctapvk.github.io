@@ -53,7 +53,7 @@ var app = new Vue({
             default: 3
         }
     },
-    mounted() {
+    mounted: function() {
         var queryDict = {};
         location.search.substr(location.search.indexOf("?") + 1).split("&")
             .forEach(function (item) {

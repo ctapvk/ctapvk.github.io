@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+https://stackoverflow.com/questions/3934271/horizontal-scrollbar-on-top-and-bottom-of-table
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap/form </title>
+    <!-- awesome core  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/lib/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .wrapper1, .wrapper2 {
+            width: 400px;
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+
+        .wrapper1 {
+            height: 20px;
+        }
+
+        .div1 {
+            height: 20px;
+        }
+
+        .div2 {
+            overflow: visible;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+        tr:hover {background-color: #acc;}
+
+    </style>
+</head>
+
+<body>
+
+<div class="wrapper1">
+    <div class="div1"></div>
+</div>
+<div class="wrapper2">
+    <div class="div2">
+        <table>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+                <th>Points</th>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>Adam</td>
+                <td>Johnson</td>
+                <td>67</td>
+                <td>67</td>
+                <td>67</td>
+                <td>67</td>
+                <td>67</td>
+                <td>67</td>
+                <td>67</td>
+                <td>67</td>
+                <td>67</td>
+                <td>67</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/lib/jquery-3.2.1.slim.min.js"></script>
+<script src="/lib/popper.min.js"></script>
+<script src="/lib/bootstrap.min.js"></script>
+<script src="/lib/holder.min.js"></script>
+<script>
+    $(function () {
+        $('.wrapper1').on('scroll', function (e) {
+            $('.wrapper2').scrollLeft($('.wrapper1').scrollLeft());
+        });
+        $('.wrapper2').on('scroll', function (e) {
+            $('.wrapper1').scrollLeft($('.wrapper2').scrollLeft());
+        });
+    });
+    $(window).on('load', function (e) {
+        $('.div1').width($('table').width());
+        $('.div2').width($('table').width());
+    });
+</script>
+</body>
+
+</html>
