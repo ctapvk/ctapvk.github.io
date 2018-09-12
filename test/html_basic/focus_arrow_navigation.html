@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap/form </title>
+    <!-- awesome core  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/lib/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .some {
+            border: 1px solid #000;
+        }
+
+        .some:focus {
+            background: #ffe; /* Цвет фона */
+            border: 1px solid #29B0D9; /* Параметры рамки */
+        }
+
+
+        table {
+            display: table;
+            border-collapse: separate;
+            border-spacing: 2px;
+            border-color: grey;
+        }
+
+        table, .blog table {
+            margin-bottom: 1em;
+            overflow: auto;
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="banch">
+
+<div class="some" tabindex="1">Lorem ipsum dolor sit amet.</div>
+<div class="some" tabindex="2">Eum fuga nesciunt nisi nulla.</div>
+<div class="some" tabindex="3">Animi blanditiis nostrum perferendis totam?</div>
+<div class="some" tabindex="4">Accusamus maiores sit sunt ullam.</div>
+<div class="some" tabindex="5">Ducimus hic maxime modi perferendis.</div>
+</div>
+
+
+<table class="gridexample">
+    <thead>
+    <tr>
+        <th></th>
+        <th>A</th>
+        <th>B</th>
+        <th>C</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th>1</th>
+        <td><input type="text" style="width:50px"/></td>
+        <td><input type="text" style="width:50px"/></td>
+        <td><input type="text" style="width:50px"/></td>
+    </tr>
+    <tr>
+        <th>2</th>
+        <td><input type="text" style="width:50px"/></td>
+        <td><input type="text" style="width:50px"/></td>
+        <td><input type="text" style="width:50px"/></td>
+    </tr>
+    <tr>
+        <th>3</th>
+        <td><input type="text" style="width:50px"/></td>
+        <td><input type="text" style="width:50px"/></td>
+        <td><input type="text" style="width:50px"/></td>
+    </tr>
+    </tbody>
+</table>
+
+
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/lib/jquery-3.2.1.slim.min.js"></script>
+<script src="/lib/popper.min.js"></script>
+<script src="/lib/bootstrap.min.js"></script>
+<script src="/lib/holder.min.js"></script>
+
+<script>
+
+    (function ($) {
+        $.fn.formNavigation = function () {
+            $(this).each(function () {
+                $(this).find('input').on('keyup', function (e) {
+                    switch (e.which) {
+                        case 39:
+                            $(this).closest('td').next().find('input').focus();
+                            break;
+                        case 37:
+                            $(this).closest('td').prev().find('input').focus();
+                            break;
+                        case 40:
+                            $(this).closest('tr').next().children().eq($(this).closest('td').index()).find('input').focus();
+                            break;
+                        case 38:
+                            $(this).closest('tr').prev().children().eq($(this).closest('td').index()).find('input').focus();
+                            break;
+                    }
+                });
+            });
+        };
+        $.fn.listNav = function () {
+            $(this).each(function () {
+                $(this).find('div').first().focus();
+                $(this).find('div').on('keyup', function (e) {
+                    switch (e.which) {
+                        case 40:
+                            $(this).closest('div').next().focus();
+                            break;
+                        case 38:
+                            $(this).closest('div').prev().focus();
+                            break;
+                    }
+                });
+            });
+        };
+    })(jQuery);
+
+    $(document).ready(function () {
+        $('.gridexample').formNavigation();
+        $('.banch').listNav();
+    });
+
+</script>
+
+</body>
+
+</html>
