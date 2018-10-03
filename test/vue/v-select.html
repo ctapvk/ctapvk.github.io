@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap/form </title>
+    <!-- awesome core  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+    <script src="/lib/vue/vuedev.js"></script>
+    <script src="http://unpkg.com/vue-select@2.0.0"></script>
+
+</head>
+
+<body>
+
+<div id="app" class="container-fluid">
+    <h2>VueSelect Basic Example</h2>
+    <v-select :options="items"></v-select>
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/lib/jquery-3.2.1.slim.min.js"></script>
+<script src="/lib/popper.min.js"></script>
+<script src="/lib/bootstrap.min.js"></script>
+<script src="/lib/holder.min.js"></script>
+
+<script>
+  Vue.component('v-select', VueSelect.VueSelect);
+  new Vue({
+    el: '#app',
+
+    data: function() {
+      return {
+        items: [
+            'foo', 'bar', 'baz',
+            'foo', 'bar', 'baz',
+            'foo', 'bar', 'baz',
+            'foo', 'bar', 'baz',
+            'foo', 'bar', 'baz',
+        ],
+      };
+    },
+
+  });
+</script>
+</body>
+
+</html>

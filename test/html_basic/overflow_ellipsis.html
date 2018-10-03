@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap/form </title>
+    <!-- awesome core  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/lib/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .wraper {
+            width: 420px;
+            height: 150px;
+            border: 1px solid #000;
+        }
+
+        div {
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="wraper">
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi asperiores consectetur dolore doloribus earum
+        eveniet, id in iste itaque, laborum magnam optio porro praesentium quia, repellat sunt velit voluptates! Facilis
+        hic laudantium, magnam mollitia odio perspiciatis sequi voluptatem? Corporis doloremque placeat quidem
+        reprehenderit soluta? Dolores in magni omnis qui.
+    </div>
+</div>
+
+<h1> for IE </h1>
+
+<script>
+  var ellipsisText = function(e, etc) {
+    var wordArray = e.innerHTML.split(' ');
+    while (e.scrollHeight > e.offsetHeight) {
+      wordArray.pop();
+      e.innerHTML = wordArray.join(' ') + (etc || '...');
+    }
+  };
+  document.addEventListener('DOMContentLoaded', function() { // Аналог $(document).ready(function(){
+    [].forEach.call(document.querySelectorAll('.ie_text_eliplse'), function(elem) {
+      ellipsisText(elem);
+    });
+  });
+
+</script>
+<style>
+    .ie_text_eliplse {
+        line-height: 1.4em;
+        max-height: 5.6em; /* max: 4 lines */
+        width: 300px;
+        border: 1px solid #000;
+    }
+</style>
+<div class="ie_text_eliplse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidi ut aliquip ex ea commodo
+    consequat sum dolor sit 123
+</div>
+
+
+<style>
+
+    .container {
+        width: 200px;
+    }
+
+    .block-with-text {
+        overflow: hidden;
+        position: relative;
+        line-height: 1.2em;
+        max-height: 3.6em;
+        text-align: justify;
+        margin-right: -1em;
+        padding-right: 1em;
+    }
+
+    .block-with-text + .block-with-text {
+        margin-top: 10px;
+    }
+
+    .block-with-text:before {
+        content: '...';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    .block-with-text:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 1em;
+        height: 1em;
+        margin-top: 0.2em;
+        background: white;
+    }
+</style>
+<div class="container">
+    <div class="block-with-text">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a
+    </div>
+    <div class="block-with-text">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry
+    </div>
+    <div class="block-with-text">
+        Lorem Ipsum is simply
+    </div>
+</div>
+
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/lib/jquery-3.2.1.slim.min.js"></script>
+<script src="/lib/popper.min.js"></script>
+<script src="/lib/bootstrap.min.js"></script>
+<script src="/lib/holder.min.js"></script>
+</body>
+
+</html>
