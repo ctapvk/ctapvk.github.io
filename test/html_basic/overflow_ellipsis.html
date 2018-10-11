@@ -17,7 +17,7 @@
             border: 1px solid #000;
         }
 
-        div {
+        .div1 {
 
             overflow: hidden;
             text-overflow: ellipsis;
@@ -32,7 +32,7 @@
 <body>
 
 <div class="wraper">
-    <div>
+    <div class="div1">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi asperiores consectetur dolore doloribus earum
         eveniet, id in iste itaque, laborum magnam optio porro praesentium quia, repellat sunt velit voluptates! Facilis
         hic laudantium, magnam mollitia odio perspiciatis sequi voluptatem? Corporis doloremque placeat quidem
@@ -59,29 +59,35 @@
 </script>
 <style>
     .ie_text_eliplse {
-        line-height: 1.4em;
-        max-height: 5.6em; /* max: 4 lines */
-        width: 300px;
+        display: block;
+        display: -webkit-box;
+        width: 500px;
+        font-size: 14px;
+        line-height: 1.5em;
+        max-height: 4em;
         border: 1px solid #000;
     }
 </style>
 <div class="ie_text_eliplse">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidi ut aliquip ex ea commodo
-    consequat sum dolor sit 123
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aspernatur dolorem nihil non ratione veniam voluptatem voluptatibus? Accusantium commodi consectetur eos error, illum molestias necessitatibus nemo perspiciatis placeat, quia tenetur veniam. Aspernatur at dignissimos distinctio in, ipsum laborum molestiae numquam obcaecati placeat quasi reiciendis sed similique sunt totam ullam?
 </div>
 
 
+
+<h1> hide </h1>
 <style>
 
-    .container {
-        width: 200px;
+    .container55 {
+        width: 300px;
+        border: 1px solid #000;
+
     }
 
     .block-with-text {
         overflow: hidden;
         position: relative;
         line-height: 1.2em;
-        max-height: 3.6em;
+        max-height: 4.8em;
         text-align: justify;
         margin-right: -1em;
         padding-right: 1em;
@@ -108,7 +114,7 @@
         background: white;
     }
 </style>
-<div class="container">
+<div class="container55">
     <div class="block-with-text">
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
         standard dummy text ever since the 1500s, when an unknown printer took a
