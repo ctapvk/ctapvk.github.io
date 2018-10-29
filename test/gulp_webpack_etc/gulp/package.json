@@ -1,0 +1,10 @@
+{
+  "name": "pecom",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Maxim Kasatkin <mvkasatkin@gmail.com>",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-vueify2": "0.0.3"
+  }
+}

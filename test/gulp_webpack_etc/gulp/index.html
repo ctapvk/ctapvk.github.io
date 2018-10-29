@@ -1,0 +1,33 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="./deploy/bundle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.js"></script>
+    <script>
+      window.module = {}; // Yeah just avoid the error as you have no module
+      window.vueComponents = {}; // Global register of your components...
+    </script>
+    <script src="./deploy/my-component.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <div>
+        {{ foo }}
+        <my-component></my-component>
+    </div>
+</div>
+
+<script>
+  new Vue({
+    // Here you give your component to your vue instance
+    components: window.vueComponents,
+    data() {
+      return {
+        foo: 'Hello33'
+      };
+    },
+    el: '#app'
+  });
+</script>
+</body>
+</html>
