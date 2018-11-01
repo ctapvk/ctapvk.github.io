@@ -1,7 +1,7 @@
 var Encore = require('@symfony/webpack-encore');
 Encore //
-    .setOutputPath('./svd/')  // directory where all compiled assets will be stored
-    .setPublicPath('/svd/')   // what's the public path to this directory (relative to your project's document root dir)
+    .setOutputPath('./scd/')  // directory where all compiled assets will be stored
+    .setPublicPath('/scd/')   // what's the public path to this directory (relative to your project's document root dir)
     .cleanupOutputBeforeBuild()  // empty the outputPath dir before each build
 
     .addEntry('main', './src/main.js') // will output as /public/main.js
@@ -23,8 +23,8 @@ Encore //
     .configureFilenames({
       // js: '[name].[hash:8].js',
     })// create hashed filenames (e.g. app.abc123.css)
-// .enableVersioning() // enableVersioning
-// .enableSourceMaps(!Encore.isProduction()) // enableSourceMaps
+    // .enableVersioning() // enableVersioning
+    .enableSourceMaps(!Encore.isProduction()) // enableSourceMaps
 ;
 
 var config = Encore.getWebpackConfig();
@@ -32,8 +32,4 @@ config.externals = {
   //jquery: 'jQuery',
   //BX: 'BX'
 };
-
-
-
-
 module.exports = config; // export the final configuration
