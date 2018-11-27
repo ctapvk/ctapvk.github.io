@@ -10,27 +10,47 @@
     <!-- Bootstrap core CSS -->
     <link href="/lib/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-        .wraper {
-            width: 420px;
-            height: 150px;
-            border: 1px solid #000;
-        }
-
-        .div1 {
-
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-        }
-
-    </style>
 </head>
 
 <body>
 
+<h1>Если
+    длина больше 20 символов, отображается первые 20 символов остальные
+    затемняются. При наведении на затемнение отображается полный адрес <br>span:hover</h1>
+<style>
+    .phone-link span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 22ch;
+        display: block;
+    }
+
+    .phone-link span:hover {
+        overflow: visible;
+    }
+</style>
+<div class="phone-link">
+    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
+</div>
+
+<h1>обрезаем по второй строке only in chrome -webkit-line-clamp </h1>
+<style>
+    .wraper {
+        width: 420px;
+        height: 150px;
+        border: 1px solid #000;
+    }
+
+    .div1 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+</style>
 <div class="wraper">
     <div class="div1">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi asperiores consectetur dolore doloribus earum
@@ -40,8 +60,7 @@
     </div>
 </div>
 
-<h1> for IE </h1>
-
+<h1>с помощью скипрта самый нормальный способ </h1>
 <script>
   var ellipsisText = function(e, etc) {
     var wordArray = e.innerHTML.split(' ');
@@ -69,9 +88,11 @@
     }
 </style>
 <div class="ie_text_eliplse">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aspernatur dolorem nihil non ratione veniam voluptatem voluptatibus? Accusantium commodi consectetur eos error, illum molestias necessitatibus nemo perspiciatis placeat, quia tenetur veniam. Aspernatur at dignissimos distinctio in, ipsum laborum molestiae numquam obcaecati placeat quasi reiciendis sed similique sunt totam ullam?
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aspernatur dolorem nihil non ratione veniam
+    voluptatem voluptatibus? Accusantium commodi consectetur eos error, illum molestias necessitatibus nemo perspiciatis
+    placeat, quia tenetur veniam. Aspernatur at dignissimos distinctio in, ipsum laborum molestiae numquam obcaecati
+    placeat quasi reiciendis sed similique sunt totam ullam?
 </div>
-
 
 
 <h1> hide </h1>

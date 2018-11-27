@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap/form </title>
+    <!-- awesome core  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/lib/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<style>
+    .container {
+        background: tomato;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    .item {
+        width: 100px;
+        background: gold;
+        height: 100px;
+        border: 1px solid black;
+        font-size: 30px;
+        line-height: 100px;
+        text-align: center;
+        margin: 10px
+    }
+
+    .container > br {
+        width: 100%;
+        content: '';
+    }
+
+
+</style>
+<div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <br class="linebreak1"/>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+    <div class="item">10</div>
+</div>
+
+
+<style>
+
+    .grid {
+        display: inline-block;
+    }
+
+    .cell {
+        display: inline-block;
+        position: relative;
+        float: left;
+        margin: 8px;
+        width: 48px;
+        height: 48px;
+        background-color: #bdbdbd;
+        font-family: 'Helvetica', 'Arial', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        text-indent: 4px;
+        color: #fff;
+    }
+
+    .cell:nth-child(3n) + .cell {
+        clear: both;
+    }
+</style>
+<div class="grid">
+    <div class="cell">1</div>
+    <div class="cell">2</div>
+    <div class="cell">3</div>
+    <div class="cell">4</div>
+    <div class="cell">5</div>
+    <div class="cell">6</div>
+    <div class="cell">7</div>
+    <div class="cell">8</div>
+    <div class="cell">9</div>
+    <div class="cell">10</div>
+</div>
+
+
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/lib/jquery-3.2.1.slim.min.js"></script>
+<script src="/lib/popper.min.js"></script>
+<script src="/lib/bootstrap.min.js"></script>
+<script src="/lib/holder.min.js"></script>
+</body>
+
+</html>
