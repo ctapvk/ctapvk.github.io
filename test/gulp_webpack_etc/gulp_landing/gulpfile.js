@@ -16,7 +16,7 @@ const PUBLIC_DIR = "./public";
 const banner = ['/*!\n',
   ' * Copyright 2013-' + (new Date()) +  ' <%= pkg.author %>\n',
   ' */\n',
-  '\n'
+  '\n\n'
 ].join('');
 
 // Copy third party libraries from /node_modules into /vendor
