@@ -1,8 +1,19 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #1c7430;
+  background-color: #eee;
 }
+
+.menu {
+  display: flex;
+  width: 100%;
+}
+  .__item {
+    background-color: #999;
+    border: 3px dot #000;
+    width: 150px;
+    height: 50px;
+  }
 
 
 

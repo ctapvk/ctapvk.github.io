@@ -10,7 +10,7 @@ const sass = require('gulp-sass');
 const pkg = require('./package.json');
 const gulp_jade = require('gulp-jade');
 const uglify = require('gulp-uglify');
-const del = require('del')
+const del = require('del');
 
 const PUBLIC_DIR = './public';
 const SRC_DIR = './src';
@@ -81,13 +81,15 @@ function css() {
         suffix: '.min',
       })).
       pipe(cleanCSS()).
-      pipe(gulp.dest(PUBLIC_DIR + '/css/all.css')).
+      pipe(gulp.dest(PUBLIC_DIR + '/css')).
       pipe(browsersync.stream());
 }
 
 function jade() {
   return gulp.src(SRC_DIR + '/jade/public/**/*.jade').
-      pipe(gulp_jade()).
+      pipe(gulp_jade({
+        pretty: true,
+      })).
       pipe(gulp.dest(PUBLIC_DIR));
 };
 
@@ -97,18 +99,15 @@ function scripts() {
       pipe(header(banner, {
         pkg: pkg,
       })).
-      pipe(gulp.dest(PUBLIC_DIR + '/js'));
-  pipe(rename({
-    suffix: '.min',
-  })).
+      pipe(gulp.dest(PUBLIC_DIR + '/js')).
+      pipe(rename({
+        suffix: '.min',
+      })).
       pipe(uglify()).
       pipe(gulp.dest(PUBLIC_DIR + '/js'));
 };
 
-gulp.task('clean', function (cb) {
-  //  del(['**'], {cwd: 'app'}, cb)
-  return del([PUBLIC_DIR+'/**'], cb)
-})
+gulp.task('clean', () => del([PUBLIC_DIR]));
 
 // BrowserSync
 function browserSync(done) {
@@ -132,10 +131,12 @@ function watchFiles() {
   gulp.watch(SRC_DIR + '/scss/**/*', css);
   gulp.watch(SRC_DIR + '/jade/**/*', jade);
   gulp.watch(SRC_DIR + '/js/**/*', scripts);
+  gulp.watch(PUBLIC_DIR + '/**/*', browserSyncReload);
 }
 
-// todo tasks
+// todo main tasks
 gulp.task('default', gulp.parallel('vendor', css, jade, scripts));
+gulp.task('dev1',   gulp.parallel('default', watchFiles, browserSync));
 gulp.task('dev', gulp.series('clean',
     gulp.parallel('default', watchFiles, browserSync),
 ));
