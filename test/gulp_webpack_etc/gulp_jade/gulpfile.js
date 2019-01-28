@@ -1,26 +1,21 @@
 // Load plugins
-const autoprefixer = require('gulp-autoprefixer');
-const browsersync = require('browser-sync').create();
-const cleanCSS = require('gulp-clean-css');
 const gulp = require('gulp');
-const header = require('gulp-header');
-const plumber = require('gulp-plumber');
-const rename = require('gulp-rename');
-const sass = require('gulp-sass');
-const pkg = require('./package.json');
-const gulp_jade = require('gulp-jade');
+const gulpJade = require('gulp-jade');
 const uglify = require('gulp-uglify');
+const sass = require('gulp-sass');
+const cleanCSS = require('gulp-clean-css');
+const browsersync = require('browser-sync').create();
 const del = require('del');
 
 const PUBLIC_DIR = './public';
 const SRC_DIR = './src';
-
-// Set the banner content
-const banner = [
-  '/*!\n',
-  ' * Copyright 2013-' + (new Date()) + ' <%= pkg.author %>\n',
-  ' */\n',
-].join('');
+const IS_PROD = false;
+const BROWSER_SYNC_CONF = {
+  port: 3333,
+  server: {
+    baseDir: PUBLIC_DIR,
+  },
+};
 
 // Copy third party libraries from /node_modules into /vendor
 gulp.task('vendor', function(cb) {
@@ -61,69 +56,40 @@ gulp.task('vendor', function(cb) {
 
 });
 
-// CSS task
-function css() {
-  return gulp.src(SRC_DIR + '/scss/*.scss').
-      pipe(plumber()).
-      pipe(sass({
-        outputStyle: 'expanded',
-      })).
-      on('error', sass.logError).
-      pipe(autoprefixer({
-        browsers: ['last 2 versions'],
-        cascade: false,
-      })).
-      pipe(header(banner, {
-        pkg: pkg,
-      })).
-      pipe(gulp.dest(PUBLIC_DIR + '/css')).
-      pipe(rename({
-        suffix: '.min',
-      })).
-      pipe(cleanCSS()).
-      pipe(gulp.dest(PUBLIC_DIR + '/css')).
-      pipe(browsersync.stream());
+function jade() {
+  let cur = gulp.src(SRC_DIR + '/jade/public/**/*.jade');
+  cur = cur.pipe(gulpJade({pretty: IS_PROD ? false : true}));
+  cur = cur.pipe(gulp.dest(PUBLIC_DIR));
+  cur = cur.pipe(browsersync.stream()); // пишет в консоль что изменилось
+  return cur;
 }
 
-function jade() {
-  return gulp.src(SRC_DIR + '/jade/public/**/*.jade').
-      pipe(gulp_jade({
-        pretty: true,
-      })).
-      pipe(gulp.dest(PUBLIC_DIR));
-};
-
 function scripts() {
-  return gulp.src(SRC_DIR + '/js/**/*.js').
-      pipe(plumber()).
-      pipe(header(banner, {
-        pkg: pkg,
-      })).
-      pipe(gulp.dest(PUBLIC_DIR + '/js')).
-      pipe(rename({
-        suffix: '.min',
-      })).
-      pipe(uglify()).
-      pipe(gulp.dest(PUBLIC_DIR + '/js'));
-};
+  let cur = gulp.src(SRC_DIR + '/js/**/*.js');
+  if (IS_PROD) cur = cur.pipe(uglify());
+  cur = cur.pipe(gulp.dest(PUBLIC_DIR + '/js'));
+  cur = cur.pipe(browsersync.stream()); // пишет в консоль что изменилось
+  return cur;
+}
+
+function css() {
+  let cur = gulp.src(SRC_DIR + '/scss/*.scss');
+  cur = cur.pipe(sass({outputStyle: 'expanded',}));
+  if (IS_PROD) cur = cur.pipe(cleanCSS());
+  cur = cur.pipe(gulp.dest(PUBLIC_DIR + '/css'));
+  cur = cur.pipe(browsersync.stream()); // пишет в консоль что изменилось
+  return cur;
+}
 
 gulp.task('clean', () => del([PUBLIC_DIR]));
 
 // BrowserSync
-function browserSync(done) {
-  browsersync.init({
-    port: 3333,
-    server: {
-      baseDir: PUBLIC_DIR,
-    },
-  });
-  done();
+function browserSync() {
+  browsersync.init(BROWSER_SYNC_CONF);
 }
 
-// BrowserSync Reload
-function browserSyncReload(done) {
+function browserSyncReload() {
   browsersync.reload();
-  done();
 }
 
 // Watch files
@@ -136,7 +102,6 @@ function watchFiles() {
 
 // todo main tasks
 gulp.task('default', gulp.parallel('vendor', css, jade, scripts));
-gulp.task('dev1',   gulp.parallel('default', watchFiles, browserSync));
 gulp.task('dev', gulp.series('clean',
     gulp.parallel('default', watchFiles, browserSync),
 ));
