@@ -6,6 +6,9 @@ const sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
 const browsersync = require('browser-sync').create();
 const del = require('del');
+const concat = require('gulp-concat');
+const sourcemaps = require('gulp-sourcemaps');
+
 
 const PUBLIC_DIR = './public';
 const SRC_DIR = './src';
@@ -61,6 +64,27 @@ function jade() {
   cur = cur.pipe(gulpJade({pretty: IS_PROD ? false : true}));
   cur = cur.pipe(gulp.dest(PUBLIC_DIR));
   cur = cur.pipe(browsersync.stream()); // пишет в консоль что изменилось
+  //
+  cur = gulp.src(SRC_DIR + '/jade/public/static/**/*');
+  cur = cur.pipe(gulp.dest(PUBLIC_DIR + '/static'));
+  //
+  cur = gulp.src(SRC_DIR + '/jade/**/*.js');
+  if (!IS_PROD) cur = cur.pipe(sourcemaps.init());
+  cur = cur.pipe(concat('all.js'));
+  if (!IS_PROD) cur = cur.pipe(sourcemaps.write());
+  if (IS_PROD) cur = cur.pipe(uglify());
+  cur = cur.pipe(gulp.dest(PUBLIC_DIR + '/'));
+  cur = cur.pipe(browsersync.stream()); // пишет в консоль что изменилось
+  //
+  cur = gulp.src(SRC_DIR + '/jade/**/*.scss');
+  cur = cur.pipe(sass({outputStyle: 'expanded',}));
+  if (!IS_PROD) cur = cur.pipe(sourcemaps.init());
+  cur = cur.pipe(concat('all.css'));
+  if (!IS_PROD) cur = cur.pipe(sourcemaps.write());
+  if (IS_PROD) cur = cur.pipe(cleanCSS());
+  cur = cur.pipe(gulp.dest(PUBLIC_DIR + '/'));
+  cur = cur.pipe(browsersync.stream()); // пишет в консоль что изменилось
+
   return cur;
 }
 

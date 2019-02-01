@@ -1,7 +1,18 @@
 doctype html
 html
-  include ./../includes/head.jade
+  include ./../blocks/head/head.jade
   body
-    h1 My Site
-    p Welcome to my super lame site.
-    include ./../includes/footer.jade
+    .header
+      .header__items
+        include ./../blocks/menu/menu
+
+  h1.center
+    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium exercitationem nemo odio provident veniam voluptatum.
+
+  .center
+      .left
+          img(src='https://via.placeholder.com/250')
+      .right
+          h2 Lorem ipsum dolor sit amet, consectetur adipisicing.
+          .red-btn Lorem ipsum dolor.
+  include ./../blocks/footer/footer.jade
