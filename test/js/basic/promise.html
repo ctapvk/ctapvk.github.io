@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> js / promise </title>
+  <!-- awesome core  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="/lib/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/lib/jquery-3.3.1.min.js"></script>
+<script src="/lib/bootstrap.min.js"></script>
+
+<script>
+  let p = new Promise((resolve, reject) => {
+    // то же что reject(new Error("o_O"))
+//    resolve("ddd");
+    throw new Error("o_O");
+  })
+
+  p.then(alert);
+  p.catch(alert);
+</script>
+</body>
+
+</html>

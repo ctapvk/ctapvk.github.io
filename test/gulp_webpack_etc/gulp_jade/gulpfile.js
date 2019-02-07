@@ -41,6 +41,11 @@ gulp.task('vendor', function(cb) {
     '!./node_modules/jquery/dist/core.js',
   ]).pipe(gulp.dest(PUBLIC_DIR + '/vendor/jquery'));
 
+  // jQueryUi
+  gulp.src([
+    './node_modules/jqueryui/*min.*',
+  ]).pipe(gulp.dest(PUBLIC_DIR + '/vendor/jqueryui'));
+
   // jQuery Easing
   gulp.src([
     './node_modules/jquery.easing/*.js',
@@ -61,7 +66,7 @@ gulp.task('vendor', function(cb) {
 
 function jade() {
   let cur = gulp.src(SRC_DIR + '/jade/public/**/*.jade');
-  cur = cur.pipe(gulpJade({pretty: IS_PROD ? false : true}));
+  cur = cur.pipe(gulpJade({pretty: IS_PROD ? false : true, locals: {'te': 2}}));
   cur = cur.pipe(gulp.dest(PUBLIC_DIR));
   cur = cur.pipe(browsersync.stream()); // пишет в консоль что изменилось
   //

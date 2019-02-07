@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>angular / ng-blur </title>
+  <!-- awesome core  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="/lib/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+<body ng-app='myapp' ng-controller="OurController as ctrl" ng-cloak>
+
+<div class="tt" ng-blur="ctrl.te()" contenteditable="true" ng-model="ctrl.ttt">ssss</div>
+<input type="text" ng-model="ctrl.test">
+<br>
+<button ng-click="ctrl.log()">test</button>
+</body>
+
+<script type="text/javascript" src="/lib/angular.min.js"></script>
+<script type="text/javascript">
+  var moduleApp = angular.module('myapp', []);
+  moduleApp.controller('OurController', OurController);
+
+  function OurController($scope) {
+    var vm = this;
+    vm.ttt = 'sss';
+    vm.test = 'sss';
+    vm.te = function() {
+      console.log($scope,vm.ttt);
+    };
+
+    vm.log = function() {
+      console.log(vm);
+    };
+
+  };
+</script>
+
+</html>
