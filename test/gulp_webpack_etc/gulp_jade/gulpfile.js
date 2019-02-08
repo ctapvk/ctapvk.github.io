@@ -15,6 +15,7 @@ const SRC_DIR = './src';
 const IS_PROD = false;
 const BROWSER_SYNC_CONF = {
   port: 3333,
+  notify:false,
   server: {
     baseDir: PUBLIC_DIR,
   },
@@ -41,16 +42,6 @@ gulp.task('vendor', function(cb) {
     '!./node_modules/jquery/dist/core.js',
   ]).pipe(gulp.dest(PUBLIC_DIR + '/vendor/jquery'));
 
-  // jQueryUi
-  gulp.src([
-    './node_modules/jqueryui/*min.*',
-  ]).pipe(gulp.dest(PUBLIC_DIR + '/vendor/jqueryui'));
-
-  // jQuery Easing
-  gulp.src([
-    './node_modules/jquery.easing/*.js',
-  ]).pipe(gulp.dest(PUBLIC_DIR + '/vendor/jquery-easing'));
-
   // Simple Line Icons
   gulp.src([
     './node_modules/simple-line-icons/fonts/**',
@@ -59,6 +50,19 @@ gulp.task('vendor', function(cb) {
   gulp.src([
     './node_modules/simple-line-icons/css/**',
   ]).pipe(gulp.dest(PUBLIC_DIR + '/vendor/simple-line-icons/css'));
+
+  gulp.src([
+    './node_modules/jquery/dist/jquery.min.js',
+    './node_modules/bootstrap/dist/**/bootstrap.bundle.min.js',
+    './node_modules/jqueryui/*.min.js',
+  ]).pipe(concat('dist.js'))
+  .pipe(gulp.dest(PUBLIC_DIR + '/'));
+
+  gulp.src([
+    './node_modules/bootstrap/dist/**/bootstrap.min.css', //  http://bootstrap-4.ru/docs/4.0/getting-started/contents/
+    './node_modules/jqueryui/*-ui.min.css',
+  ]).pipe(concat('dist.css'))
+  .pipe(gulp.dest(PUBLIC_DIR + '/'));
 
   cb();
 

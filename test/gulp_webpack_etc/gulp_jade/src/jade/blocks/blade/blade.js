@@ -4,4 +4,6 @@
       console.log("blade tedfst");
     }
   })
+
+  $('footer').test();
 })(jQuery);
