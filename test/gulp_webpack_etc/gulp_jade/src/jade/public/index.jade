@@ -1,18 +1,16 @@
-doctype html
-html
-  include ./../blocks/head/head.jade
-  body
+extends ../layouts/minimal/index
+
+block body
     .header
-      .header__items
-        include ./../blocks/menu/menu
+        .header__items
+            include ./../blocks/menu/menu
 
-  h1.center
-    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium exercitationem nemo odio provident veniam voluptatum.
+    h1.center
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium exercitationem nemo odio provident veniam voluptatum.
 
-  .center
-      .left
-          img(src='https://via.placeholder.com/250')
-      .right
-          h2 Lorem ipsum dolor sit amet, consectetur adipisicing.
-          .red-btn Lorem ipsum dolor.
-  include ./../blocks/footer/footer.jade
+    .center
+        .left
+            img(src='https://via.placeholder.com/250')
+        .right
+            h2 Lorem ipsum dolor sit amet, consectetur adipisicing.
+            .red-btn Lorem ipsum dolor.
