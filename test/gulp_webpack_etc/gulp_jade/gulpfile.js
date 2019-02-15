@@ -1,4 +1,30 @@
-// Load plugins
+/** это может собирать фронт
+ *
+ * из SRC_DIR/jade/public/* делает html файлы + all.js all.css в PUBLIC_DIR
+ * из SRC_DIR/js/* и SRC_DIR/scss/* соответсвенно кладет файлы в PUBLIC_DIR
+ * собирает DIST_CSS в PUBLIC_DIR/dist.css и DIST_JS в PUBLIC_DIR/dist.js
+ * browsersync синхронизирует браузер после изменений
+ */
+const IS_PROD = false;
+const SRC_DIR = './src';
+const PUBLIC_DIR = './public';
+const BROWSER_SYNC_CONF = {
+  port: 3333,
+  notify: false,
+  server: {
+    baseDir: PUBLIC_DIR,
+  },
+};
+const DIST_CSS = [
+  './node_modules/bootstrap/dist/**/bootstrap.min.css', //  http://bootstrap-4.ru/docs/4.0/getting-started/contents/
+  './node_modules/jqueryui/*-ui.min.css',
+];
+const DIST_JS = [
+  './node_modules/jquery/dist/jquery.min.js',
+  './node_modules/bootstrap/dist/**/bootstrap.bundle.min.js',
+  './node_modules/jqueryui/*.min.js',
+];
+
 const gulp = require('gulp');
 const gulpJade = require('gulp-jade');
 const uglify = require('gulp-uglify');
@@ -8,18 +34,6 @@ const browsersync = require('browser-sync').create();
 const del = require('del');
 const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
-
-
-const PUBLIC_DIR = './public';
-const SRC_DIR = './src';
-const IS_PROD = false;
-const BROWSER_SYNC_CONF = {
-  port: 3333,
-  notify:false,
-  server: {
-    baseDir: PUBLIC_DIR,
-  },
-};
 
 // Copy third party libraries from /node_modules into /vendor
 gulp.task('vendor', function(cb) {
@@ -51,18 +65,8 @@ gulp.task('vendor', function(cb) {
     './node_modules/simple-line-icons/css/**',
   ]).pipe(gulp.dest(PUBLIC_DIR + '/vendor/simple-line-icons/css'));
 
-  gulp.src([
-    './node_modules/jquery/dist/jquery.min.js',
-    './node_modules/bootstrap/dist/**/bootstrap.bundle.min.js',
-    './node_modules/jqueryui/*.min.js',
-  ]).pipe(concat('dist.js'))
-  .pipe(gulp.dest(PUBLIC_DIR + '/'));
-
-  gulp.src([
-    './node_modules/bootstrap/dist/**/bootstrap.min.css', //  http://bootstrap-4.ru/docs/4.0/getting-started/contents/
-    './node_modules/jqueryui/*-ui.min.css',
-  ]).pipe(concat('dist.css'))
-  .pipe(gulp.dest(PUBLIC_DIR + '/'));
+  gulp.src(DIST_JS).pipe(concat('dist.js')).pipe(gulp.dest(PUBLIC_DIR + '/'));
+  gulp.src(DIST_CSS).pipe(concat('dist.css')).pipe(gulp.dest(PUBLIC_DIR + '/'));
 
   cb();
 
