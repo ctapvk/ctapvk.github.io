@@ -1,173 +1,169 @@
 <?php
 
-namespace RefactoringGuru\AbstractFactory\RealWorld;
+namespace RefactoringGuru\AbstractFactory\Conceptual;
 
 /**
- * Интерфейс Абстрактной фабрики объявляет создающие методы для каждого
- * определённого типа продукта.
+ * Интерфейс Абстрактной Фабрики объявляет набор методов, которые возвращают
+ * различные абстрактные продукты.  Эти продукты называются семейством и связаны
+ * темой или концепцией высокого уровня. Продукты одного семейства обычно могут
+ * взаимодействовать между собой. Семейство продуктов может иметь несколько
+ * вариаций,  но продукты одной вариации несовместимы с продуктами другой.
  */
-interface TemplateFactory
+interface AbstractFactory
 {
-    public function createTitleTemplate(): TitleTemplate;
+    public function createProductA(): AbstractProductA;
 
-    public function createPageTemplate(): PageTemplate;
+    public function createProductB(): AbstractProductB;
 }
 
 /**
- * Каждая Конкретная Фабрика соответствует определённому варианту  (или
- * семейству) продуктов.
- *
- * Эта Конкретная Фабрика создает шаблоны Twig.
+ * Конкретная Фабрика производит семейство продуктов одной вариации. Фабрика
+ * гарантирует совместимость полученных продуктов.  Обратите внимание, что
+ * сигнатуры методов Конкретной Фабрики возвращают абстрактный продукт, в то
+ * время как внутри метода создается экземпляр  конкретного продукта.
  */
-class TwigTemplateFactory implements TemplateFactory
+class ConcreteFactory1 implements AbstractFactory
 {
-    public function createTitleTemplate(): TitleTemplate
+    public function createProductA(): AbstractProductA
     {
-        return new TwigTitleTemplate;
+        return new ConcreteProductA1;
     }
 
-    public function createPageTemplate(): PageTemplate
+    public function createProductB(): AbstractProductB
     {
-        return new TwigPageTemplate($this->createTitleTemplate());
-    }
-}
-
-/**
- * А эта Конкретная Фабрика создает шаблоны PHPTemplate.
- */
-class PHPTemplateFactory implements TemplateFactory
-{
-    public function createTitleTemplate(): TitleTemplate
-    {
-        return new PHPTemplateTitleTemplate;
-    }
-
-    public function createPageTemplate(): PageTemplate
-    {
-        return new PHPTemplatePageTemplate($this->createTitleTemplate());
+        return new ConcreteProductB1;
     }
 }
 
 /**
- * Каждый отдельный тип продукта должен иметь отдельный интерфейс. Все варианты
- * продукта должны соответствовать одному интерфейсу.
- *
- * Например, этот интерфейс Абстрактного Продукта описывает поведение  шаблонов
- * заголовков страниц.
+ * Каждая Конкретная Фабрика имеет соответствующую вариацию продукта.
  */
-interface TitleTemplate
+class ConcreteFactory2 implements AbstractFactory
 {
-    public function getTemplateString(): string;
-}
-
-/**
- * Этот Конкретный Продукт предоставляет шаблоны заголовков страниц Twig.
- */
-class TwigTitleTemplate implements TitleTemplate
-{
-    public function getTemplateString(): string
+    public function createProductA(): AbstractProductA
     {
-        return "<h1>{{ title }}</h1>";
+        return new ConcreteProductA2;
+    }
+
+    public function createProductB(): AbstractProductB
+    {
+        return new ConcreteProductB2;
     }
 }
 
 /**
- * А этот Конкретный Продукт предоставляет шаблоны заголовков страниц
- * PHPTemplate.
+ * Каждый отдельный продукт семейства продуктов должен иметь базовый интерфейс.
+ * Все вариации продукта должны реализовывать этот интерфейс.
  */
-class PHPTemplateTitleTemplate implements TitleTemplate
+interface AbstractProductA
 {
-    public function getTemplateString(): string
+    public function usefulFunctionA(): string;
+}
+
+/**
+ * Конкретные продукты создаются соответствующими Конкретными Фабриками.
+ */
+class ConcreteProductA1 implements AbstractProductA
+{
+    public function usefulFunctionA(): string
     {
-        return "<h1><?= $title; ?></h1>";
+        return "The result of the product A1.";
+    }
+}
+
+class ConcreteProductA2 implements AbstractProductA
+{
+    public function usefulFunctionA(): string
+    {
+        return "The result of the product A2.";
     }
 }
 
 /**
- * Это еще один тип Абстрактного Продукта, который описывает шаблоны целых
- * страниц.
+ * Базовый интерфейс другого продукта. Все продукты могут взаимодействовать друг
+ * с другом, но правильное взаимодействие возможно только между продуктами одной
+ * и той же конкретной вариации.
  */
-interface PageTemplate
+interface AbstractProductB
 {
-    public function getTemplateString(): string;
+    /**
+     * Продукт B способен работать самостоятельно...
+     */
+    public function usefulFunctionB(): string;
+
+    /**
+     * ...а также взаимодействовать с Продуктами Б той же вариации.
+     *
+     * Абстрактная Фабрика гарантирует, что все продукты, которые она создает,
+     * имеют одинаковую вариацию и, следовательно, совместимы.
+     */
+    public function anotherUsefulFunctionB(AbstractProductA $collaborator): string;
 }
 
 /**
- * Шаблон страниц использует под-шаблон заголовков, поэтому мы должны
- * предоставить способ установить объект для этого под-шаблона. Абстрактная
- * фабрика позаботится о том, чтобы подать сюда под-шаблон подходящего типа.
+ * Конкретные Продукты создаются соответствующими Конкретными Фабриками.
  */
-abstract class BasePageTemplate implements PageTemplate
+class ConcreteProductB1 implements AbstractProductB
 {
-    protected $titleTemplate;
-
-    public function __construct(TitleTemplate $titleTemplate)
+    public function usefulFunctionB(): string
     {
-        $this->titleTemplate = $titleTemplate;
+        return "The result of the product B1.";
+    }
+
+    /**
+     * Продукт B1 может корректно работать только с Продуктом A1. Тем не менее,
+     * он принимает любой экземпляр Абстрактного Продукта А в качестве
+     * аргумента.
+     */
+    public function anotherUsefulFunctionB(AbstractProductA $collaborator): string
+    {
+        $result = $collaborator->usefulFunctionA();
+
+        return "The result of the B1 collaborating with the ({$result})";
+    }
+}
+
+class ConcreteProductB2 implements AbstractProductB
+{
+    public function usefulFunctionB(): string
+    {
+        return "The result of the product B2.";
+    }
+
+    /**
+     * Продукт B2 может корректно работать только с Продуктом A2. Тем не менее,
+     * он принимает любой экземпляр Абстрактного Продукта А в качестве
+     * аргумента.
+     */
+    public function anotherUsefulFunctionB(AbstractProductA $collaborator): string
+    {
+        $result = $collaborator->usefulFunctionA();
+
+        return "The result of the B2 collaborating with the ({$result})";
     }
 }
 
 /**
- * Вариант шаблонов страниц Twig.
+ * Клиентский код работает с фабриками и продуктами только через абстрактные
+ * типы: Абстрактная Фабрика и Абстрактный Продукт. Это позволяет передавать
+ * любой подкласс фабрики или продукта клиентскому коду, не нарушая его.
  */
-class TwigPageTemplate extends BasePageTemplate
+function clientCode(AbstractFactory $factory)
 {
-    public function getTemplateString(): string
-    {
-        $renderedTitle = $this->titleTemplate->getTemplateString();
+    $productA = $factory->createProductA();
+    $productB = $factory->createProductB();
 
-        return <<<HTML
-        <div class="page">
-            $renderedTitle
-            <article class="content">{{ content }}</article>
-        </div>
-HTML;
-    }
+    echo $productB->usefulFunctionB() . "\n";
+    echo $productB->anotherUsefulFunctionB($productA) . "\n";
 }
 
 /**
- * Вариант шаблонов страниц PHPTemplate.
+ * Клиентский код может работать с любым конкретным классом фабрики.
  */
-class PHPTemplatePageTemplate extends BasePageTemplate
-{
-    public function getTemplateString(): string
-    {
-        $renderedTitle = $this->titleTemplate->getTemplateString();
+echo "Client: Testing client code with the first factory type:\n";
+clientCode(new ConcreteFactory1);
 
-        return <<<HTML
-        <div class="page">
-            $renderedTitle
-            <article class="content"><?= $content; ?></article>
-        </div>
-HTML;
-    }
-}
+echo "\n";
 
-/**
- * Клиентский код. Обратите внимание, что он принимает класс Абстрактной Фабрики
- * в качестве параметра, что позволяет клиенту работать с любым типом конкретной
- * фабрики.
- */
-function templateRenderer(TemplateFactory $factory)
-{
-    $pageTemplate = $factory->createPageTemplate();
-
-    echo $pageTemplate->getTemplateString();
-
-    // Вот как вы бы использовали этот шаблон в дальнейшем:
-
-    // Twig::render($pageTemplate->getTemplateString(), [
-    //     'title' => $page->title,
-    //     'content' => $page->content, ]);
-}
-
-/**
- * Теперь в других частях приложения клиентский код может принимать фабричные
- * объекты любого типа.
- */
-echo "Testing rendering with the Twig factory:\n";
-templateRenderer(new TwigTemplateFactory);
-echo "\n\n";
-
-echo "Testing rendering with the PHPTemplate factory:\n";
-templateRenderer(new PHPTemplateFactory);
+echo "Client: Testing the same client code with the second factory type:\n";
+clientCode(new ConcreteFactory2);
