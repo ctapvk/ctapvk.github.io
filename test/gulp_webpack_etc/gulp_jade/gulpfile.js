@@ -1,7 +1,7 @@
 /** это может собирать фронт
  *
- * из SRC_DIR/jade/public/* делает html файлы + all.js all.css в PUBLIC_DIR
- * из SRC_DIR/js/* и SRC_DIR/scss/* соответсвенно кладет файлы в PUBLIC_DIR
+ * из SRC_DIR/jade/public/*.jade делает html файлы + all.js all.css в PUBLIC_DIR
+ * из SRC_DIR/js/*.js и SRC_DIR/scss/*.scss соответсвенно кладет файлы в PUBLIC_DIR
  * собирает DIST_CSS в PUBLIC_DIR/dist.css и DIST_JS в PUBLIC_DIR/dist.js
  * browsersync синхронизирует браузер после изменений
  */

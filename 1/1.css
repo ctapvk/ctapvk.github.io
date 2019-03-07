@@ -1,0 +1,3591 @@
+.gridwrap {
+    display: flex;
+}
+
+.node3 > .wrapper1 {
+    color: #333
+}
+
+.node3 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node3 a {
+    color: rgb(25, 230, 34)
+}
+
+.node2 > .wrapper1 {
+    color: #333
+}
+
+.node2 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.screen-xs .node2 > .wrapper1 > .wrapper2 {
+    padding-top: 5px !important;
+    padding-bottom: 20px !important
+}
+
+.node2 a {
+    color: rgb(25, 230, 34)
+}
+
+#svg2 path, #svg2 circle, #svg2 polygon, #svg2 rect {
+    fill: rgb(8, 66, 55)
+}
+
+#svg2 defs > path {
+    fill: none
+}
+
+#svg2 path[fill="none"], #svg2 circle[fill="none"], #svg2 polygon[fill="none"], #svg2 rect[fill="none"] {
+    fill: none
+}
+
+#svg2 .st0 {
+    fill: rgb(8, 66, 55);
+}
+
+.node5 > .wrapper1 {
+    color: #333
+}
+
+.node5 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node5 a {
+    color: rgb(25, 230, 34)
+}
+
+.node6 > .wrapper1 {
+    color: #333
+}
+
+.node6 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.screen-sm .node6 > .wrapper1 > .wrapper2 {
+    padding-right: 20px !important
+}
+
+.node6 a {
+    color: rgb(25, 230, 34)
+}
+
+.node7 > .wrapper1 {
+    color: #333
+}
+
+.node7 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.screen-sm .node7 > .wrapper1 > .wrapper2 {
+    padding-right: 20px !important
+}
+
+.node7 a {
+    color: rgb(25, 230, 34)
+}
+
+.node4 > .wrapper1 {
+    color: #333
+}
+
+.node4 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node4 a {
+    color: rgb(25, 230, 34)
+}
+
+#svg3 path, #svg3 circle, #svg3 polygon, #svg3 rect {
+    fill: rgb(8, 66, 55)
+}
+
+#svg3 defs > path {
+    fill: none
+}
+
+#svg3 path[fill="none"], #svg3 circle[fill="none"], #svg3 polygon[fill="none"], #svg3 rect[fill="none"] {
+    fill: none
+}
+
+#svg3 .st0 {
+    fill: rgb(8, 66, 55);
+}
+
+.node13 > .wrapper1 {
+    color: #333
+}
+
+.node13 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node13 a {
+    color: rgb(25, 230, 34)
+}
+
+.node14 > .wrapper1 {
+    color: #333
+}
+
+.node14 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.screen-sm .node14 > .wrapper1 > .wrapper2 {
+    padding-right: 20px !important
+}
+
+.node14 a {
+    color: rgb(25, 230, 34)
+}
+
+.node15 > .wrapper1 {
+    color: #333
+}
+
+.node15 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.screen-sm .node15 > .wrapper1 > .wrapper2 {
+    padding-right: 20px !important
+}
+
+.node15 a {
+    color: rgb(25, 230, 34)
+}
+
+.node16 > .wrapper1 {
+    color: #333
+}
+
+.node16 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.screen-sm .node16 > .wrapper1 > .wrapper2 {
+    padding-right: 20px !important
+}
+
+.node16 a {
+    color: rgb(25, 230, 34)
+}
+
+.node12 > .wrapper1 {
+    color: #333
+}
+
+.node12 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node12 a {
+    color: rgb(25, 230, 34)
+}
+
+.node1 > .wrapper1 {
+    color: #333
+}
+
+.node1 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node1 a {
+    color: rgb(25, 230, 34)
+}
+
+.node0 > .wrapper1 {
+    background-color: white;
+    color: #333
+}
+
+.node0 > .wrapper1 > .wrapper2 {
+    padding-top: 0px;
+    padding-bottom: 0px
+}
+
+.node0 a {
+    color: rgb(25, 230, 34)
+}
+
+.node28 > .wrapper1 {
+    color: #FFF
+}
+
+.node28 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node28 a {
+    color: rgb(230, 196, 25)
+}
+
+.node29 > .wrapper1 {
+    color: #FFF
+}
+
+.node29 > .wrapper1 > .wrapper2 {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px
+}
+
+.node29 a {
+    color: rgb(230, 196, 25)
+}
+
+.node29 .padding {
+    height: 70px
+}
+
+.node31 > .wrapper1 {
+    color: #FFF
+}
+
+.node31 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node31 a {
+    color: rgb(25, 230, 34)
+}
+
+.node32 > .wrapper1 {
+    color: #FFF
+}
+
+.node32 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node32 a {
+    color: rgb(25, 230, 34)
+}
+
+.node33 > .wrapper1 {
+    color: #FFF
+}
+
+.node33 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node33 a {
+    color: rgb(25, 230, 34)
+}
+
+.node34 > .wrapper1 {
+    color: #FFF
+}
+
+.node34 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node34 a {
+    color: rgb(25, 230, 34)
+}
+
+.node35 > .wrapper1 {
+    color: #FFF
+}
+
+.node35 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node35 a {
+    color: rgb(25, 230, 34)
+}
+
+.node36 > .wrapper1 {
+    color: #FFF
+}
+
+.node36 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node36 a {
+    color: rgb(25, 230, 34)
+}
+
+.node37 > .wrapper1 {
+    color: #FFF
+}
+
+.node37 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node37 a {
+    color: rgb(25, 230, 34)
+}
+
+.node38 > .wrapper1 {
+    color: #FFF
+}
+
+.node38 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node38 a {
+    color: rgb(25, 230, 34)
+}
+
+.node30 > .wrapper1 {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+    border-radius: 25px
+}
+
+.node30 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border-radius: 22px
+}
+
+.node30 a {
+    color: rgb(25, 230, 34)
+}
+
+.node27 > .wrapper1 {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #FFF
+}
+
+.node27 > .wrapper1 > .wrapper2 {
+    background-image: linear-gradient(to bottom, rgba(20, 17, 0, 0.74) 0%, rgba(25, 77, 77, 0.2) 100%);
+    padding-top: 101px;
+    padding-bottom: 2px
+}
+
+.node27 a {
+    color: rgb(230, 196, 25)
+}
+
+#uid10 {
+    background-color: rgb(250, 215, 30);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-style: solid;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-color: rgb(220, 185, 4);
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+#uid10:hover, #uid10.hover, #uid10.hover-on-scroll {
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(220, 185, 4);
+    color: rgb(250, 215, 30);
+}
+
+#uid10:active, #uid10.active {
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(176, 148, 4);
+    color: rgb(250, 215, 30);
+}
+
+#uid10:before {
+}
+
+#uid10:active:before, #uid10.active:before {
+    background-color: rgb(0, 0, 0);
+}
+
+#uid10 .fa {
+    font-size: 18px;
+}
+
+.node48 > .wrapper1 {
+    color: #333
+}
+
+.node48 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node48 a {
+    color: rgb(25, 230, 34)
+}
+
+#uid11 {
+    background-color: rgb(250, 215, 30);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-style: solid;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-color: rgb(220, 185, 4);
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+#uid11:hover, #uid11.hover, #uid11.hover-on-scroll {
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(220, 185, 4);
+    color: rgb(250, 215, 30);
+}
+
+#uid11:active, #uid11.active {
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(176, 148, 4);
+    color: rgb(250, 215, 30);
+}
+
+#uid11:before {
+}
+
+#uid11:active:before, #uid11.active:before {
+    background-color: rgb(0, 0, 0);
+}
+
+#uid11 .fa {
+    font-size: 18px;
+}
+
+.node49 > .wrapper1 {
+    color: #333
+}
+
+.node49 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node49 a {
+    color: rgb(25, 230, 34)
+}
+
+#uid12 {
+    background-color: rgb(250, 215, 30);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-style: solid;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-color: rgb(220, 185, 4);
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+#uid12:hover, #uid12.hover, #uid12.hover-on-scroll {
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(220, 185, 4);
+    color: rgb(250, 215, 30);
+}
+
+#uid12:active, #uid12.active {
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(176, 148, 4);
+    color: rgb(250, 215, 30);
+}
+
+#uid12:before {
+}
+
+#uid12:active:before, #uid12.active:before {
+    background-color: rgb(0, 0, 0);
+}
+
+#uid12 .fa {
+    font-size: 18px;
+}
+
+.node50 > .wrapper1 {
+    color: #333
+}
+
+.node50 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node50 a {
+    color: rgb(25, 230, 34)
+}
+
+#uid13 {
+    background-color: rgb(250, 215, 30);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-style: solid;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-color: rgb(220, 185, 4);
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+#uid13:hover, #uid13.hover, #uid13.hover-on-scroll {
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(220, 185, 4);
+    color: rgb(250, 215, 30);
+}
+
+#uid13:active, #uid13.active {
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(176, 148, 4);
+    color: rgb(250, 215, 30);
+}
+
+#uid13:before {
+}
+
+#uid13:active:before, #uid13.active:before {
+    background-color: rgb(0, 0, 0);
+}
+
+#uid13 .fa {
+    font-size: 18px;
+}
+
+.node51 > .wrapper1 {
+    color: #333
+}
+
+.node51 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node51 a {
+    color: rgb(25, 230, 34)
+}
+
+#uid14 {
+    background-color: rgb(250, 215, 30);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-style: solid;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-color: rgb(220, 185, 4);
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+#uid14:hover, #uid14.hover, #uid14.hover-on-scroll {
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(220, 185, 4);
+    color: rgb(250, 215, 30);
+}
+
+#uid14:active, #uid14.active {
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(176, 148, 4);
+    color: rgb(250, 215, 30);
+}
+
+#uid14:before {
+}
+
+#uid14:active:before, #uid14.active:before {
+    background-color: rgb(0, 0, 0);
+}
+
+#uid14 .fa {
+    font-size: 18px;
+}
+
+.node52 > .wrapper1 {
+    color: #333
+}
+
+.node52 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node52 a {
+    color: rgb(25, 230, 34)
+}
+
+#uid15 {
+    background-color: rgb(250, 215, 30);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-style: solid;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-color: rgb(220, 185, 4);
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+#uid15:hover, #uid15.hover, #uid15.hover-on-scroll {
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(220, 185, 4);
+    color: rgb(250, 215, 30);
+}
+
+#uid15:active, #uid15.active {
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(176, 148, 4);
+    color: rgb(250, 215, 30);
+}
+
+#uid15:before {
+}
+
+#uid15:active:before, #uid15.active:before {
+    background-color: rgb(0, 0, 0);
+}
+
+#uid15 .fa {
+    font-size: 18px;
+}
+
+.node53 > .wrapper1 {
+    color: #333
+}
+
+.node53 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node53 a {
+    color: rgb(25, 230, 34)
+}
+
+.node46 > .wrapper1 {
+    color: #333
+}
+
+.node46 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node46 a {
+    color: rgb(25, 230, 34)
+}
+
+.node45 > .wrapper1 {
+    background-color: white;
+    color: #333
+}
+
+.node45 > .wrapper1 > .wrapper2 {
+    padding-top: 19px;
+    padding-bottom: 2px
+}
+
+.node45 a {
+    color: rgb(25, 230, 34)
+}
+
+.node60 > .wrapper1 {
+    color: #333
+}
+
+.node60 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 22px;
+    padding-left: 5px
+}
+
+.node60 a {
+    color: rgb(25, 230, 34)
+}
+
+.node61 > .wrapper1 {
+    color: #333
+}
+
+.node61 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 108px;
+    padding-bottom: 39px;
+    padding-left: 5px
+}
+
+.screen-xs .node61 > .wrapper1 > .wrapper2 {
+    padding-right: 5px !important;
+    padding-bottom: 50px !important
+}
+
+.screen-sm .node61 > .wrapper1 > .wrapper2 {
+    padding-right: 5px !important
+}
+
+.screen-md .node61 > .wrapper1 > .wrapper2 {
+    padding-right: 30px !important
+}
+
+.node61 a {
+    color: rgb(25, 230, 34)
+}
+
+#node62_meta .result_work .info_result {
+    margin-bottom: 15px;
+}
+
+#node62_meta .result_work .percent_block {
+    height: 2px;
+    background-color: rgba(200, 200, 200, 0.5);
+    border-radius: 1px;
+    position: relative;
+}
+
+#node62_meta .result_work .percent_block .progress_box {
+    width: 70%;
+    height: 2px;
+    background-color: rgb(33, 125, 211);
+    border-radius: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#node62_meta .result_work .percent_block .progress_box .progress_elements_box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 2px;
+}
+
+#node62_meta .result_work .percent_block .progress_box .progress_elements_box .progress_percent {
+    color: rgb(33, 125, 211);
+    position: absolute;
+    top: -40px;
+    right: 0;
+}
+
+#node62_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: -4px;
+    display: flex;
+}
+
+#node62_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller .opacity_roller {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    background-color: rgb(33, 125, 211);
+    opacity: 0.2;
+    z-index: 3;
+}
+
+#node62_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller .roller {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    margin: auto;
+    background-color: rgb(33, 125, 211);
+    z-index: 4;
+}
+
+.screen-xs #node62_meta .result_work .percent_block {
+    margin-top: 50px;
+}
+
+.node62 > .wrapper1 {
+    color: #333
+}
+
+.node62 > .wrapper1 > .wrapper2 {
+    padding-top: 30px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node62 a {
+    color: rgb(25, 230, 34)
+}
+
+#node63_meta .result_work .info_result {
+    margin-bottom: 15px;
+}
+
+#node63_meta .result_work .percent_block {
+    height: 2px;
+    background-color: rgba(200, 200, 200, 0.5);
+    border-radius: 1px;
+    position: relative;
+}
+
+#node63_meta .result_work .percent_block .progress_box {
+    width: 100%;
+    height: 2px;
+    background-color: rgb(33, 211, 94);
+    border-radius: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#node63_meta .result_work .percent_block .progress_box .progress_elements_box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 2px;
+}
+
+#node63_meta .result_work .percent_block .progress_box .progress_elements_box .progress_percent {
+    color: rgb(33, 211, 94);
+    position: absolute;
+    top: -40px;
+    right: 0;
+}
+
+#node63_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: -4px;
+    display: flex;
+}
+
+#node63_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller .opacity_roller {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    background-color: rgb(33, 211, 94);
+    opacity: 0.2;
+    z-index: 3;
+}
+
+#node63_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller .roller {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    margin: auto;
+    background-color: rgb(33, 211, 94);
+    z-index: 4;
+}
+
+.screen-xs #node63_meta .result_work .percent_block {
+    margin-top: 50px;
+}
+
+.node63 > .wrapper1 {
+    color: #333
+}
+
+.node63 > .wrapper1 > .wrapper2 {
+    padding-top: 26px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node63 a {
+    color: rgb(25, 230, 34)
+}
+
+#node64_meta .result_work .info_result {
+    margin-bottom: 15px;
+}
+
+#node64_meta .result_work .percent_block {
+    height: 2px;
+    background-color: rgba(200, 200, 200, 0.5);
+    border-radius: 1px;
+    position: relative;
+}
+
+#node64_meta .result_work .percent_block .progress_box {
+    width: 95%;
+    height: 2px;
+    background-color: rgb(251, 139, 0);
+    border-radius: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#node64_meta .result_work .percent_block .progress_box .progress_elements_box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 2px;
+}
+
+#node64_meta .result_work .percent_block .progress_box .progress_elements_box .progress_percent {
+    color: rgb(251, 139, 0);
+    position: absolute;
+    top: -40px;
+    right: 0;
+}
+
+#node64_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: -4px;
+    display: flex;
+}
+
+#node64_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller .opacity_roller {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    background-color: rgb(251, 139, 0);
+    opacity: 0.2;
+    z-index: 3;
+}
+
+#node64_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller .roller {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    margin: auto;
+    background-color: rgb(251, 139, 0);
+    z-index: 4;
+}
+
+.screen-xs #node64_meta .result_work .percent_block {
+    margin-top: 50px;
+}
+
+.node64 > .wrapper1 {
+    color: #333
+}
+
+.node64 > .wrapper1 > .wrapper2 {
+    padding-top: 26px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node64 a {
+    color: rgb(25, 230, 34)
+}
+
+.node65 > .wrapper1 {
+    color: #333
+}
+
+.node65 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.screen-xs .node65 > .wrapper1 > .wrapper2 {
+    padding-top: 30px !important
+}
+
+.node65 a {
+    color: rgb(25, 230, 34)
+}
+
+.node59 > .wrapper1 {
+    color: #333
+}
+
+.node59 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node59 a {
+    color: rgb(25, 230, 34)
+}
+
+.node70 > .wrapper1 {
+    color: #333
+}
+
+.node70 > .wrapper1 > .wrapper2 {
+    padding-top: 40px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node70 a {
+    color: rgb(25, 230, 34)
+}
+
+.node72 > .wrapper1 {
+    color: #333
+}
+
+.node72 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node72 a {
+    color: rgb(25, 230, 34)
+}
+
+.node73 > .wrapper1 {
+    color: #333
+}
+
+.node73 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node73 a {
+    color: rgb(25, 230, 34)
+}
+
+.node74 > .wrapper1 {
+    color: #333
+}
+
+.node74 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node74 a {
+    color: rgb(25, 230, 34)
+}
+
+.node74 .showBg:before {
+    background: rgba(235, 255, 0, 0.5)
+}
+
+.node74 .showBg:after {
+    background: rgba(235, 255, 0, 0.5)
+}
+
+.node75 > .wrapper1 {
+    color: #333
+}
+
+.node75 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node75 a {
+    color: rgb(25, 230, 34)
+}
+
+.node75 .showBg:before {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.node75 .showBg:after {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.node76 > .wrapper1 {
+    color: #333
+}
+
+.node76 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node76 a {
+    color: rgb(25, 230, 34)
+}
+
+.node76 .showBg:before {
+    background: rgba(235, 255, 0, 0.5)
+}
+
+.node76 .showBg:after {
+    background: rgba(235, 255, 0, 0.5)
+}
+
+.node77 > .wrapper1 {
+    color: #333
+}
+
+.node77 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node77 a {
+    color: rgb(25, 230, 34)
+}
+
+.node77 .showBg:before {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.node77 .showBg:after {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.node78 > .wrapper1 {
+    color: #333
+}
+
+.node78 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node78 a {
+    color: rgb(25, 230, 34)
+}
+
+.node78 .showBg:before {
+    background: rgba(235, 255, 0, 0.5)
+}
+
+.node78 .showBg:after {
+    background: rgba(235, 255, 0, 0.5)
+}
+
+.node79 > .wrapper1 {
+    color: #333
+}
+
+.node79 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node79 a {
+    color: rgb(25, 230, 34)
+}
+
+.node79 .showBg:before {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.node79 .showBg:after {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.node80 > .wrapper1 {
+    color: #333
+}
+
+.node80 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node80 a {
+    color: rgb(25, 230, 34)
+}
+
+.node81 > .wrapper1 {
+    color: #333
+}
+
+.node81 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node81 a {
+    color: rgb(25, 230, 34)
+}
+
+.node82 > .wrapper1 {
+    color: #333
+}
+
+.node82 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node82 a {
+    color: rgb(25, 230, 34)
+}
+
+.node82 .showBg:before {
+    background: rgba(235, 255, 0, 0.5)
+}
+
+.node82 .showBg:after {
+    background: rgba(235, 255, 0, 0.5)
+}
+
+.node83 > .wrapper1 {
+    color: #333
+}
+
+.node83 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node83 a {
+    color: rgb(25, 230, 34)
+}
+
+.node83 .showBg:before {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.node83 .showBg:after {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.node84 > .wrapper1 {
+    color: #333
+}
+
+.node84 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node84 a {
+    color: rgb(25, 230, 34)
+}
+
+.node84 .showBg:before {
+    background: rgba(235, 255, 0, 0.5)
+}
+
+.node84 .showBg:after {
+    background: rgba(235, 255, 0, 0.5)
+}
+
+.node85 > .wrapper1 {
+    color: #333
+}
+
+.node85 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node85 a {
+    color: rgb(25, 230, 34)
+}
+
+.node85 .showBg:before {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.node85 .showBg:after {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.node86 > .wrapper1 {
+    color: #333
+}
+
+.node86 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node86 a {
+    color: rgb(25, 230, 34)
+}
+
+.node86 .showBg:before {
+    background: rgba(235, 255, 0, 0.5)
+}
+
+.node86 .showBg:after {
+    background: rgba(235, 255, 0, 0.5)
+}
+
+.node87 > .wrapper1 {
+    color: #333
+}
+
+.node87 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node87 a {
+    color: rgb(25, 230, 34)
+}
+
+.node87 .showBg:before {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.node87 .showBg:after {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.node71 > .wrapper1 {
+    color: #333
+}
+
+.node71 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node71 a {
+    color: rgb(25, 230, 34)
+}
+
+.node58 > .wrapper1 {
+    background-color: white;
+    color: #333
+}
+
+.node58 > .wrapper1 > .wrapper2 {
+    padding-top: 64px;
+    padding-bottom: 0px
+}
+
+.screen-xs .node58 > .wrapper1 > .wrapper2 {
+    padding-top: 70px !important;
+    padding-bottom: 90px !important
+}
+
+.screen-sm .node58 > .wrapper1 > .wrapper2 {
+    padding-top: 90px !important;
+    padding-bottom: 120px !important
+}
+
+.screen-md .node58 > .wrapper1 > .wrapper2 {
+    padding-top: 120px !important;
+    padding-bottom: 145px !important
+}
+
+.node58 a {
+    color: rgb(25, 230, 34)
+}
+
+.node98 > .wrapper1 {
+    color: #333
+}
+
+.node98 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 22px;
+    padding-left: 5px
+}
+
+.node98 a {
+    color: rgb(25, 230, 34)
+}
+
+.node99 > .wrapper1 {
+    color: #333
+}
+
+.node99 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 108px;
+    padding-bottom: 39px;
+    padding-left: 5px
+}
+
+.screen-xs .node99 > .wrapper1 > .wrapper2 {
+    padding-right: 5px !important;
+    padding-bottom: 50px !important
+}
+
+.screen-sm .node99 > .wrapper1 > .wrapper2 {
+    padding-right: 5px !important
+}
+
+.screen-md .node99 > .wrapper1 > .wrapper2 {
+    padding-right: 30px !important
+}
+
+.node99 a {
+    color: rgb(25, 230, 34)
+}
+
+#node100_meta .result_work .info_result {
+    margin-bottom: 15px;
+}
+
+#node100_meta .result_work .percent_block {
+    height: 5px;
+    background-color: rgba(200, 200, 200, 0.5);
+    border-radius: 2.5px;
+    position: relative;
+}
+
+#node100_meta .result_work .percent_block .progress_box {
+    width: 70%;
+    height: 5px;
+    background-color: rgb(33, 125, 211);
+    border-radius: 2.5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#node100_meta .result_work .percent_block .progress_box .progress_elements_box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 5px;
+}
+
+#node100_meta .result_work .percent_block .progress_box .progress_elements_box .progress_percent {
+    color: rgb(33, 125, 211);
+    position: absolute;
+    top: -40px;
+    right: 0;
+}
+
+#node100_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller {
+    width: 18.5px;
+    height: 18.5px;
+    border-radius: 50%;
+    margin-right: -9.25px;
+    display: flex;
+}
+
+#node100_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller .opacity_roller {
+    width: 18.5px;
+    height: 18.5px;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    background-color: rgb(33, 125, 211);
+    opacity: 0.2;
+    z-index: 3;
+}
+
+#node100_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller .roller {
+    width: 8.5px;
+    height: 8.5px;
+    border-radius: 50%;
+    margin: auto;
+    background-color: rgb(33, 125, 211);
+    z-index: 4;
+}
+
+.screen-xs #node100_meta .result_work .percent_block {
+    margin-top: 50px;
+}
+
+.node100 > .wrapper1 {
+    color: #333
+}
+
+.node100 > .wrapper1 > .wrapper2 {
+    padding-top: 30px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node100 a {
+    color: rgb(25, 230, 34)
+}
+
+#node101_meta .result_work .info_result {
+    margin-bottom: 15px;
+}
+
+#node101_meta .result_work .percent_block {
+    height: 5px;
+    background-color: rgba(200, 200, 200, 0.5);
+    border-radius: 2.5px;
+    position: relative;
+}
+
+#node101_meta .result_work .percent_block .progress_box {
+    width: 100%;
+    height: 5px;
+    background-color: rgb(33, 211, 94);
+    border-radius: 2.5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#node101_meta .result_work .percent_block .progress_box .progress_elements_box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 5px;
+}
+
+#node101_meta .result_work .percent_block .progress_box .progress_elements_box .progress_percent {
+    color: rgb(33, 211, 94);
+    position: absolute;
+    top: -40px;
+    right: 0;
+}
+
+#node101_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller {
+    width: 18.5px;
+    height: 18.5px;
+    border-radius: 50%;
+    margin-right: -9.25px;
+    display: flex;
+}
+
+#node101_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller .opacity_roller {
+    width: 18.5px;
+    height: 18.5px;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    background-color: rgb(33, 211, 94);
+    opacity: 0.2;
+    z-index: 3;
+}
+
+#node101_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller .roller {
+    width: 8.5px;
+    height: 8.5px;
+    border-radius: 50%;
+    margin: auto;
+    background-color: rgb(33, 211, 94);
+    z-index: 4;
+}
+
+.screen-xs #node101_meta .result_work .percent_block {
+    margin-top: 50px;
+}
+
+.node101 > .wrapper1 {
+    color: #333
+}
+
+.node101 > .wrapper1 > .wrapper2 {
+    padding-top: 26px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node101 a {
+    color: rgb(25, 230, 34)
+}
+
+#node102_meta .result_work .info_result {
+    margin-bottom: 15px;
+}
+
+#node102_meta .result_work .percent_block {
+    height: 5px;
+    background-color: rgba(200, 200, 200, 0.5);
+    border-radius: 2.5px;
+    position: relative;
+}
+
+#node102_meta .result_work .percent_block .progress_box {
+    width: 95%;
+    height: 5px;
+    background-color: rgb(251, 139, 0);
+    border-radius: 2.5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#node102_meta .result_work .percent_block .progress_box .progress_elements_box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 5px;
+}
+
+#node102_meta .result_work .percent_block .progress_box .progress_elements_box .progress_percent {
+    color: rgb(251, 139, 0);
+    position: absolute;
+    top: -40px;
+    right: 0;
+}
+
+#node102_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller {
+    width: 18.5px;
+    height: 18.5px;
+    border-radius: 50%;
+    margin-right: -9.25px;
+    display: flex;
+}
+
+#node102_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller .opacity_roller {
+    width: 18.5px;
+    height: 18.5px;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    background-color: rgb(251, 139, 0);
+    opacity: 0.2;
+    z-index: 3;
+}
+
+#node102_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller .roller {
+    width: 8.5px;
+    height: 8.5px;
+    border-radius: 50%;
+    margin: auto;
+    background-color: rgb(251, 139, 0);
+    z-index: 4;
+}
+
+.screen-xs #node102_meta .result_work .percent_block {
+    margin-top: 50px;
+}
+
+.node102 > .wrapper1 {
+    color: #333
+}
+
+.node102 > .wrapper1 > .wrapper2 {
+    padding-top: 26px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node102 a {
+    color: rgb(25, 230, 34)
+}
+
+.node103 > .wrapper1 {
+    color: #333
+}
+
+.node103 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.screen-xs .node103 > .wrapper1 > .wrapper2 {
+    padding-top: 30px !important
+}
+
+.node103 a {
+    color: rgb(25, 230, 34)
+}
+
+.node97 > .wrapper1 {
+    color: #333
+}
+
+.node97 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node97 a {
+    color: rgb(25, 230, 34)
+}
+
+.node108 > .wrapper1 {
+    color: #333
+}
+
+.node108 > .wrapper1 > .wrapper2 {
+    padding-top: 40px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node108 a {
+    color: rgb(25, 230, 34)
+}
+
+.node110 > .wrapper1 {
+    color: #333
+}
+
+.node110 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node110 a {
+    color: rgb(25, 230, 34)
+}
+
+.node111 > .wrapper1 {
+    color: #333
+}
+
+.node111 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node111 a {
+    color: rgb(25, 230, 34)
+}
+
+.node112 > .wrapper1 {
+    color: #333
+}
+
+.node112 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node112 a {
+    color: rgb(25, 230, 34)
+}
+
+.node112 .showBg:before {
+    background: rgba(235, 255, 0, 0.5)
+}
+
+.node112 .showBg:after {
+    background: rgba(235, 255, 0, 0.5)
+}
+
+.node113 > .wrapper1 {
+    color: #333
+}
+
+.node113 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node113 a {
+    color: rgb(25, 230, 34)
+}
+
+.node113 .showBg:before {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.node113 .showBg:after {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.node114 > .wrapper1 {
+    color: #333
+}
+
+.node114 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node114 a {
+    color: rgb(25, 230, 34)
+}
+
+.node115 > .wrapper1 {
+    color: #333
+}
+
+.node115 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node115 a {
+    color: rgb(25, 230, 34)
+}
+
+.node116 > .wrapper1 {
+    color: #333
+}
+
+.node116 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node116 a {
+    color: rgb(25, 230, 34)
+}
+
+.node116 .showBg:before {
+    background: rgba(235, 255, 0, 0.5)
+}
+
+.node116 .showBg:after {
+    background: rgba(235, 255, 0, 0.5)
+}
+
+.node117 > .wrapper1 {
+    color: #333
+}
+
+.node117 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node117 a {
+    color: rgb(25, 230, 34)
+}
+
+.node117 .showBg:before {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.node117 .showBg:after {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.node109 > .wrapper1 {
+    color: #333
+}
+
+.node109 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node109 a {
+    color: rgb(25, 230, 34)
+}
+
+.node96 > .wrapper1 {
+    background-color: white;
+    color: #333
+}
+
+.node96 > .wrapper1 > .wrapper2 {
+    padding-top: 38px;
+    padding-bottom: 25px
+}
+
+.screen-xs .node96 > .wrapper1 > .wrapper2 {
+    padding-top: 70px !important;
+    padding-bottom: 90px !important
+}
+
+.screen-sm .node96 > .wrapper1 > .wrapper2 {
+    padding-top: 90px !important;
+    padding-bottom: 120px !important
+}
+
+.screen-md .node96 > .wrapper1 > .wrapper2 {
+    padding-top: 120px !important;
+    padding-bottom: 145px !important
+}
+
+.node96 a {
+    color: rgb(25, 230, 34)
+}
+
+.node128 > .wrapper1 {
+    color: #333
+}
+
+.node128 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 22px;
+    padding-left: 5px
+}
+
+.node128 a {
+    color: rgb(25, 230, 34)
+}
+
+.node129 > .wrapper1 {
+    color: #333
+}
+
+.node129 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 108px;
+    padding-bottom: 39px;
+    padding-left: 5px
+}
+
+.screen-xs .node129 > .wrapper1 > .wrapper2 {
+    padding-right: 5px !important;
+    padding-bottom: 50px !important
+}
+
+.screen-sm .node129 > .wrapper1 > .wrapper2 {
+    padding-right: 5px !important
+}
+
+.screen-md .node129 > .wrapper1 > .wrapper2 {
+    padding-right: 30px !important
+}
+
+.node129 a {
+    color: rgb(25, 230, 34)
+}
+
+#node130_meta .result_work .info_result {
+    margin-bottom: 15px;
+}
+
+#node130_meta .result_work .percent_block {
+    height: 5px;
+    background-color: rgba(200, 200, 200, 0.5);
+    border-radius: 2.5px;
+    position: relative;
+}
+
+#node130_meta .result_work .percent_block .progress_box {
+    width: 70%;
+    height: 5px;
+    background-color: rgb(33, 125, 211);
+    border-radius: 2.5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#node130_meta .result_work .percent_block .progress_box .progress_elements_box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 5px;
+}
+
+#node130_meta .result_work .percent_block .progress_box .progress_elements_box .progress_percent {
+    color: rgb(33, 125, 211);
+    position: absolute;
+    top: -40px;
+    right: 0;
+}
+
+#node130_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller {
+    width: 18.5px;
+    height: 18.5px;
+    border-radius: 50%;
+    margin-right: -9.25px;
+    display: flex;
+}
+
+#node130_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller .opacity_roller {
+    width: 18.5px;
+    height: 18.5px;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    background-color: rgb(33, 125, 211);
+    opacity: 0.2;
+    z-index: 3;
+}
+
+#node130_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller .roller {
+    width: 8.5px;
+    height: 8.5px;
+    border-radius: 50%;
+    margin: auto;
+    background-color: rgb(33, 125, 211);
+    z-index: 4;
+}
+
+.screen-xs #node130_meta .result_work .percent_block {
+    margin-top: 50px;
+}
+
+.node130 > .wrapper1 {
+    color: #333
+}
+
+.node130 > .wrapper1 > .wrapper2 {
+    padding-top: 30px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node130 a {
+    color: rgb(25, 230, 34)
+}
+
+#node131_meta .result_work .info_result {
+    margin-bottom: 15px;
+}
+
+#node131_meta .result_work .percent_block {
+    height: 5px;
+    background-color: rgba(200, 200, 200, 0.5);
+    border-radius: 2.5px;
+    position: relative;
+}
+
+#node131_meta .result_work .percent_block .progress_box {
+    width: 100%;
+    height: 5px;
+    background-color: rgb(33, 211, 94);
+    border-radius: 2.5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#node131_meta .result_work .percent_block .progress_box .progress_elements_box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 5px;
+}
+
+#node131_meta .result_work .percent_block .progress_box .progress_elements_box .progress_percent {
+    color: rgb(33, 211, 94);
+    position: absolute;
+    top: -40px;
+    right: 0;
+}
+
+#node131_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller {
+    width: 18.5px;
+    height: 18.5px;
+    border-radius: 50%;
+    margin-right: -9.25px;
+    display: flex;
+}
+
+#node131_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller .opacity_roller {
+    width: 18.5px;
+    height: 18.5px;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    background-color: rgb(33, 211, 94);
+    opacity: 0.2;
+    z-index: 3;
+}
+
+#node131_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller .roller {
+    width: 8.5px;
+    height: 8.5px;
+    border-radius: 50%;
+    margin: auto;
+    background-color: rgb(33, 211, 94);
+    z-index: 4;
+}
+
+.screen-xs #node131_meta .result_work .percent_block {
+    margin-top: 50px;
+}
+
+.node131 > .wrapper1 {
+    color: #333
+}
+
+.node131 > .wrapper1 > .wrapper2 {
+    padding-top: 26px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node131 a {
+    color: rgb(25, 230, 34)
+}
+
+#node132_meta .result_work .info_result {
+    margin-bottom: 15px;
+}
+
+#node132_meta .result_work .percent_block {
+    height: 5px;
+    background-color: rgba(200, 200, 200, 0.5);
+    border-radius: 2.5px;
+    position: relative;
+}
+
+#node132_meta .result_work .percent_block .progress_box {
+    width: 95%;
+    height: 5px;
+    background-color: rgb(251, 139, 0);
+    border-radius: 2.5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#node132_meta .result_work .percent_block .progress_box .progress_elements_box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 5px;
+}
+
+#node132_meta .result_work .percent_block .progress_box .progress_elements_box .progress_percent {
+    color: rgb(251, 139, 0);
+    position: absolute;
+    top: -40px;
+    right: 0;
+}
+
+#node132_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller {
+    width: 18.5px;
+    height: 18.5px;
+    border-radius: 50%;
+    margin-right: -9.25px;
+    display: flex;
+}
+
+#node132_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller .opacity_roller {
+    width: 18.5px;
+    height: 18.5px;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    background-color: rgb(251, 139, 0);
+    opacity: 0.2;
+    z-index: 3;
+}
+
+#node132_meta .result_work .percent_block .progress_box .progress_elements_box .progress_roller .roller {
+    width: 8.5px;
+    height: 8.5px;
+    border-radius: 50%;
+    margin: auto;
+    background-color: rgb(251, 139, 0);
+    z-index: 4;
+}
+
+.screen-xs #node132_meta .result_work .percent_block {
+    margin-top: 50px;
+}
+
+.node132 > .wrapper1 {
+    color: #333
+}
+
+.node132 > .wrapper1 > .wrapper2 {
+    padding-top: 26px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node132 a {
+    color: rgb(25, 230, 34)
+}
+
+.node133 > .wrapper1 {
+    color: #333
+}
+
+.node133 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.screen-xs .node133 > .wrapper1 > .wrapper2 {
+    padding-top: 30px !important
+}
+
+.node133 a {
+    color: rgb(25, 230, 34)
+}
+
+.node127 > .wrapper1 {
+    color: #333
+}
+
+.node127 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node127 a {
+    color: rgb(25, 230, 34)
+}
+
+.node138 > .wrapper1 {
+    color: #333
+}
+
+.node138 > .wrapper1 > .wrapper2 {
+    padding-top: 40px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node138 a {
+    color: rgb(25, 230, 34)
+}
+
+.node140 > .wrapper1 {
+    color: #333
+}
+
+.node140 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node140 a {
+    color: rgb(25, 230, 34)
+}
+
+.node141 > .wrapper1 {
+    color: #333
+}
+
+.node141 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node141 a {
+    color: rgb(25, 230, 34)
+}
+
+.node142 > .wrapper1 {
+    color: #333
+}
+
+.node142 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node142 a {
+    color: rgb(25, 230, 34)
+}
+
+.node142 .showBg:before {
+    background: rgba(235, 255, 0, 0.5)
+}
+
+.node142 .showBg:after {
+    background: rgba(235, 255, 0, 0.5)
+}
+
+.node143 > .wrapper1 {
+    color: #333
+}
+
+.node143 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node143 a {
+    color: rgb(25, 230, 34)
+}
+
+.node143 .showBg:before {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.node143 .showBg:after {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.node144 > .wrapper1 {
+    color: #333
+}
+
+.node144 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node144 a {
+    color: rgb(25, 230, 34)
+}
+
+.node144 .showBg:before {
+    background: rgba(235, 255, 0, 0.5)
+}
+
+.node144 .showBg:after {
+    background: rgba(235, 255, 0, 0.5)
+}
+
+.node145 > .wrapper1 {
+    color: #333
+}
+
+.node145 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node145 a {
+    color: rgb(25, 230, 34)
+}
+
+.node145 .showBg:before {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.node145 .showBg:after {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.node146 > .wrapper1 {
+    color: #333
+}
+
+.node146 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node146 a {
+    color: rgb(25, 230, 34)
+}
+
+.node147 > .wrapper1 {
+    color: #333
+}
+
+.node147 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node147 a {
+    color: rgb(25, 230, 34)
+}
+
+.node148 > .wrapper1 {
+    color: #333
+}
+
+.node148 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node148 a {
+    color: rgb(25, 230, 34)
+}
+
+.node148 .showBg:before {
+    background: rgba(235, 255, 0, 0.5)
+}
+
+.node148 .showBg:after {
+    background: rgba(235, 255, 0, 0.5)
+}
+
+.node149 > .wrapper1 {
+    color: #333
+}
+
+.node149 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node149 a {
+    color: rgb(25, 230, 34)
+}
+
+.node149 .showBg:before {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.node149 .showBg:after {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.node150 > .wrapper1 {
+    color: #333
+}
+
+.node150 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node150 a {
+    color: rgb(25, 230, 34)
+}
+
+.node150 .showBg:before {
+    background: rgba(235, 255, 0, 0.5)
+}
+
+.node150 .showBg:after {
+    background: rgba(235, 255, 0, 0.5)
+}
+
+.node151 > .wrapper1 {
+    color: #333
+}
+
+.node151 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node151 a {
+    color: rgb(25, 230, 34)
+}
+
+.node151 .showBg:before {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.node151 .showBg:after {
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.node139 > .wrapper1 {
+    color: #333
+}
+
+.node139 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node139 a {
+    color: rgb(25, 230, 34)
+}
+
+.node126 > .wrapper1 {
+    background-color: white;
+    color: #333
+}
+
+.node126 > .wrapper1 > .wrapper2 {
+    padding-top: 38px;
+    padding-bottom: 25px
+}
+
+.screen-xs .node126 > .wrapper1 > .wrapper2 {
+    padding-top: 70px !important;
+    padding-bottom: 90px !important
+}
+
+.screen-sm .node126 > .wrapper1 > .wrapper2 {
+    padding-top: 90px !important;
+    padding-bottom: 120px !important
+}
+
+.screen-md .node126 > .wrapper1 > .wrapper2 {
+    padding-top: 120px !important;
+    padding-bottom: 145px !important
+}
+
+.node126 a {
+    color: rgb(25, 230, 34)
+}
+
+.node161 > .wrapper1 {
+    color: #333
+}
+
+.node161 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node161 a {
+    color: rgb(25, 230, 34)
+}
+
+.node167 > .wrapper1 {
+    color: #333
+}
+
+.node167 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node167 a {
+    color: rgb(25, 230, 34)
+}
+
+.node169 > .wrapper1 {
+    color: #333
+}
+
+.node169 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node169 a {
+    color: rgb(25, 230, 34)
+}
+
+.node170 > .wrapper1 {
+    color: #333
+}
+
+.node170 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node170 a {
+    color: rgb(25, 230, 34)
+}
+
+.node168 > .wrapper1 {
+    color: #333
+}
+
+.node168 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node168 a {
+    color: rgb(25, 230, 34)
+}
+
+.node175 > .wrapper1 {
+    color: #333
+}
+
+.node175 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 0px;
+    padding-bottom: 3px;
+    padding-left: 0px
+}
+
+.screen-sm .node175 > .wrapper1 > .wrapper2 {
+    padding-right: 34px !important;
+    padding-left: 34px !important
+}
+
+.node175 a {
+    color: rgb(25, 230, 34)
+}
+
+.node176 > .wrapper1 {
+    color: #333
+}
+
+.node176 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node176 a {
+    color: rgb(25, 230, 34)
+}
+
+.node166 > .wrapper1 {
+    color: #333
+}
+
+.node166 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.screen-sm .node166 > .wrapper1 > .wrapper2 {
+    padding-bottom: 40px !important
+}
+
+.node166 a {
+    color: rgb(25, 230, 34)
+}
+
+.node178 > .wrapper1 {
+    color: #333
+}
+
+.node178 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node178 a {
+    color: rgb(25, 230, 34)
+}
+
+.node180 > .wrapper1 {
+    color: #333
+}
+
+.node180 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node180 a {
+    color: rgb(25, 230, 34)
+}
+
+.node181 > .wrapper1 {
+    color: #333
+}
+
+.node181 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node181 a {
+    color: rgb(25, 230, 34)
+}
+
+.node179 > .wrapper1 {
+    color: #333
+}
+
+.node179 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node179 a {
+    color: rgb(25, 230, 34)
+}
+
+.node186 > .wrapper1 {
+    color: #333
+}
+
+.node186 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 0px;
+    padding-bottom: 3px;
+    padding-left: 0px
+}
+
+.screen-sm .node186 > .wrapper1 > .wrapper2 {
+    padding-right: 34px !important;
+    padding-left: 34px !important
+}
+
+.node186 a {
+    color: rgb(25, 230, 34)
+}
+
+.node187 > .wrapper1 {
+    color: #333
+}
+
+.node187 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node187 a {
+    color: rgb(25, 230, 34)
+}
+
+.node177 > .wrapper1 {
+    color: #333
+}
+
+.node177 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.screen-sm .node177 > .wrapper1 > .wrapper2 {
+    padding-bottom: 40px !important
+}
+
+.node177 a {
+    color: rgb(25, 230, 34)
+}
+
+.node189 > .wrapper1 {
+    color: #333
+}
+
+.node189 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node189 a {
+    color: rgb(25, 230, 34)
+}
+
+.node191 > .wrapper1 {
+    color: #333
+}
+
+.node191 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node191 a {
+    color: rgb(25, 230, 34)
+}
+
+.node192 > .wrapper1 {
+    color: #333
+}
+
+.node192 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node192 a {
+    color: rgb(25, 230, 34)
+}
+
+.node190 > .wrapper1 {
+    color: #333
+}
+
+.node190 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node190 a {
+    color: rgb(25, 230, 34)
+}
+
+.node197 > .wrapper1 {
+    color: #333
+}
+
+.node197 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 0px;
+    padding-bottom: 3px;
+    padding-left: 0px
+}
+
+.screen-sm .node197 > .wrapper1 > .wrapper2 {
+    padding-right: 34px !important;
+    padding-left: 34px !important
+}
+
+.node197 a {
+    color: rgb(25, 230, 34)
+}
+
+.node198 > .wrapper1 {
+    color: #333
+}
+
+.node198 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node198 a {
+    color: rgb(25, 230, 34)
+}
+
+.node188 > .wrapper1 {
+    color: #333
+}
+
+.node188 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.screen-sm .node188 > .wrapper1 > .wrapper2 {
+    padding-bottom: 40px !important
+}
+
+.node188 a {
+    color: rgb(25, 230, 34)
+}
+
+.node200 > .wrapper1 {
+    color: #333
+}
+
+.node200 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node200 a {
+    color: rgb(25, 230, 34)
+}
+
+.node202 > .wrapper1 {
+    color: #333
+}
+
+.node202 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node202 a {
+    color: rgb(25, 230, 34)
+}
+
+.node203 > .wrapper1 {
+    color: #333
+}
+
+.node203 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node203 a {
+    color: rgb(25, 230, 34)
+}
+
+.node201 > .wrapper1 {
+    color: #333
+}
+
+.node201 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node201 a {
+    color: rgb(25, 230, 34)
+}
+
+.node208 > .wrapper1 {
+    color: #333
+}
+
+.node208 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 0px;
+    padding-bottom: 3px;
+    padding-left: 0px
+}
+
+.screen-sm .node208 > .wrapper1 > .wrapper2 {
+    padding-right: 34px !important;
+    padding-left: 34px !important
+}
+
+.node208 a {
+    color: rgb(25, 230, 34)
+}
+
+.node209 > .wrapper1 {
+    color: #333
+}
+
+.node209 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node209 a {
+    color: rgb(25, 230, 34)
+}
+
+.node199 > .wrapper1 {
+    color: #333
+}
+
+.node199 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.screen-sm .node199 > .wrapper1 > .wrapper2 {
+    padding-bottom: 40px !important
+}
+
+.node199 a {
+    color: rgb(25, 230, 34)
+}
+
+.node160 > .wrapper1 {
+    background-color: white;
+    color: #333
+}
+
+.node160 > .wrapper1 > .wrapper2 {
+    padding-top: 60px;
+    padding-bottom: 90px
+}
+
+.node160 a {
+    color: rgb(25, 230, 34)
+}
+
+.node160 .s-elements-grid {
+    margin-left: -10px;
+    margin-right: -10px
+}
+
+.node160 .s-elements-grid__cell.cell-0 {
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 0
+}
+
+.node160 .s-elements-grid__cell.cell-0 > .s-elements-grid__cellwrapper {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0;
+    padding-right: 10px
+}
+
+.node160 .s-elements-grid__cell.cell-1 {
+    width: 50%;
+    padding-left: 0;
+    padding-right: 10px
+}
+
+.node160 .s-elements-grid__cell.cell-1 > .s-elements-grid__cellwrapper {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 0
+}
+
+.node160 .s-elements-grid__cell.cell-2 {
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 0
+}
+
+.node160 .s-elements-grid__cell.cell-2 > .s-elements-grid__cellwrapper {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0;
+    padding-right: 10px
+}
+
+.node160 .s-elements-grid__cell.cell-3 {
+    width: 50%;
+    padding-left: 0;
+    padding-right: 10px
+}
+
+.node160 .s-elements-grid__cell.cell-3 > .s-elements-grid__cellwrapper {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 0
+}
+
+.screen-sm .node160 .s-elements-grid__cell.cell-0 {
+    width: 100% !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important
+}
+
+.screen-sm .node160 .s-elements-grid__cell.cell-0 > .s-elements-grid__cellwrapper {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important
+}
+
+.screen-sm .node160 .s-elements-grid__cell.cell-1 {
+    width: 100% !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important
+}
+
+.screen-sm .node160 .s-elements-grid__cell.cell-1 > .s-elements-grid__cellwrapper {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important
+}
+
+.screen-sm .node160 .s-elements-grid__cell.cell-2 {
+    width: 100% !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important
+}
+
+.screen-sm .node160 .s-elements-grid__cell.cell-2 > .s-elements-grid__cellwrapper {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important
+}
+
+.screen-sm .node160 .s-elements-grid__cell.cell-3 {
+    width: 100% !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important
+}
+
+.screen-sm .node160 .s-elements-grid__cell.cell-3 > .s-elements-grid__cellwrapper {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important
+}
+
+.screen-xs .node160 .s-elements-grid__cell.cell-0 {
+    width: 100% !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important
+}
+
+.screen-xs .node160 .s-elements-grid__cell.cell-0 > .s-elements-grid__cellwrapper {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important
+}
+
+.screen-xs .node160 .s-elements-grid__cell.cell-1 {
+    width: 100% !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important
+}
+
+.screen-xs .node160 .s-elements-grid__cell.cell-1 > .s-elements-grid__cellwrapper {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important
+}
+
+.screen-xs .node160 .s-elements-grid__cell.cell-2 {
+    width: 100% !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important
+}
+
+.screen-xs .node160 .s-elements-grid__cell.cell-2 > .s-elements-grid__cellwrapper {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important
+}
+
+.screen-xs .node160 .s-elements-grid__cell.cell-3 {
+    width: 100% !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important
+}
+
+.screen-xs .node160 .s-elements-grid__cell.cell-3 > .s-elements-grid__cellwrapper {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important
+}
+
+.node211 > .wrapper1 {
+    color: #333
+}
+
+.node211 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 44px;
+    padding-left: 5px
+}
+
+.node211 a {
+    color: rgb(25, 230, 34)
+}
+
+.node212 > .wrapper1 {
+    color: #333
+}
+
+.node212 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node212 a {
+    color: rgb(25, 230, 34)
+}
+
+.node210 > .wrapper1 {
+    background-color: white;
+    color: #333
+}
+
+.node210 > .wrapper1 > .wrapper2 {
+    padding-top: 60px;
+    padding-bottom: 60px
+}
+
+.node210 a {
+    color: rgb(25, 230, 34)
+}
+
+.node218 > .wrapper1 {
+    color: #333
+}
+
+.node218 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node218 a {
+    color: rgb(25, 230, 34)
+}
+
+.node219 > .wrapper1 {
+    color: #333
+}
+
+.node219 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node219 a {
+    color: rgb(25, 230, 34)
+}
+
+.node217 > .wrapper1 {
+    background-color: white;
+    color: #333
+}
+
+.node217 > .wrapper1 > .wrapper2 {
+    padding-top: 0px;
+    padding-bottom: 0px
+}
+
+.node217 a {
+    color: rgb(25, 230, 34)
+}
+
+.node226 > .wrapper1 {
+    color: #FFF
+}
+
+.node226 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node226 a {
+    color: rgb(25, 113, 230)
+}
+
+.node227 > .wrapper1 {
+    color: #FFF
+}
+
+.node227 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node227 a {
+    color: rgb(25, 113, 230)
+}
+
+.node228 > .wrapper1 {
+    color: #FFF
+}
+
+.node228 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node228 a {
+    color: rgb(25, 113, 230)
+}
+
+.node225 > .wrapper1 {
+    color: #FFF
+}
+
+.node225 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node225 a {
+    color: rgb(25, 113, 230)
+}
+
+.node224 > .wrapper1 {
+    background-color: rgb(23, 30, 38);
+    color: #FFF
+}
+
+.node224 > .wrapper1 > .wrapper2 {
+    padding-top: 15px;
+    padding-bottom: 15px
+}
+
+.node224 a {
+    color: rgb(25, 113, 230)
+}
+
+.node256 > .wrapper1 {
+    color: #333
+}
+
+.node256 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node256 a {
+    color: rgb(25, 230, 34)
+}
+
+.node257 > .wrapper1 {
+    color: #333
+}
+
+.node257 > .wrapper1 > .wrapper2 {
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px
+}
+
+.node257 a {
+    color: rgb(25, 230, 34)
+}
+
+div.area.screen-lg {
+    min-width: 1170px;
+}
+
+div.area.screen-lg .container {
+    width: 1170px;
+}
+
+div.area.screen-lg .container.soft {
+    max-width: 1170px;
+}
+
+div.area.screen-md {
+    min-width: 970px;
+}
+
+div.area.screen-md .container {
+    width: 970px;
+}
+
+div.area.screen-md .container.soft {
+    max-width: 970px;
+}
+
+div.area.screen-sm {
+    min-width: 750px;
+}
+
+div.area.screen-sm .container {
+    width: 750px;
+}
+
+div.area.screen-sm .container.soft {
+    max-width: 750px;
+}
+
+div.area.screen-xs .container {
+    max-width: 767px;
+}
