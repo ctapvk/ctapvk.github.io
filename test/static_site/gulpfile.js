@@ -38,23 +38,10 @@ const sourcemaps = require('gulp-sourcemaps');
 // Copy third party libraries from /node_modules into /vendor
 gulp.task('vendor', function(cb) {
 
-  // Bootstrap
-  gulp.src([
-    './node_modules/bootstrap/dist/**/*',
-    '!./node_modules/bootstrap/dist/css/bootstrap-grid*',
-    '!./node_modules/bootstrap/dist/css/bootstrap-reboot*',
-  ]).pipe(gulp.dest(PUBLIC_DIR + '/vendor/bootstrap'));
-
   // Font Awesome
   gulp.src([
     './node_modules/@fortawesome/**/*',
   ]).pipe(gulp.dest(PUBLIC_DIR + '/vendor'));
-
-  // jQuery
-  gulp.src([
-    './node_modules/jquery/dist/*',
-    '!./node_modules/jquery/dist/core.js',
-  ]).pipe(gulp.dest(PUBLIC_DIR + '/vendor/jquery'));
 
   // Simple Line Icons
   gulp.src([
@@ -65,6 +52,7 @@ gulp.task('vendor', function(cb) {
     './node_modules/simple-line-icons/css/**',
   ]).pipe(gulp.dest(PUBLIC_DIR + '/vendor/simple-line-icons/css'));
 
+  gulp.src(SRC_DIR + '/static_copy/**').pipe(gulp.dest(PUBLIC_DIR + '/'));
   gulp.src(DIST_JS).pipe(concat('dist.js')).pipe(gulp.dest(PUBLIC_DIR + '/'));
   gulp.src(DIST_CSS).pipe(concat('dist.css')).pipe(gulp.dest(PUBLIC_DIR + '/'));
 
