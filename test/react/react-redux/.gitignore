@@ -1,0 +1,16 @@
+# development environment
+.idea
+*.sublime-project
+*.sublime-workspace
+.buildpath
+.project
+# Mac DS_Store Files & Win Thumbs.db
+.DS_Store
+Thumbs.db
+# vendors
+node_modules
+vendor
+composer.lock
+
+/public
+v8-compile-cache-0
