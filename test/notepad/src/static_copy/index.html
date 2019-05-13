@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- awesome core  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="xXaMJTR6y03d3mPOeVlxEtu0Bpi7WWzs07Q1YGcf">
+
+    <title>555</title>
+
+    <!-- Styles -->
+    <link href="https://notepad.ctapvk.ru/css/app.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+
+        <ul class="sidebar-nav" id="sideBar">
+            <li>  <a href="#">Dashboard</a> </li>
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+        <form id="logout-form" action="https://notepad.ctapvk.ru/logout" method="POST" >
+            <input type="hidden" name="_token" value="xXaMJTR6y03d3mPOeVlxEtu0Bpi7WWzs07Q1YGcf">
+            Привет ,  Серега !
+            <button >Выход </button>
+            <a href="#menu-toggle" class="btn btn-secondary fixed-btn" id="menu-toggle" >Toggle Menu</a>
+            <a class="btn btn-primary" onclick="store()">Сохранить</a>
+            <a class="btn btn-info" onclick="newnote()">Новая запись</a>
+            <a class="btn btn-danger pull-right" onclick="delnote()">Удалить</a>
+        </form>
+
+
+        <input type="hidden" name="id" value="0">
+        <div id="backups"></div>
+        <div class="input-group">
+            <span class="input-group-addon">Название</span>
+            <input id="msg" type="text" class="form-control" name=title value=''>
+        </div>
+        <div class="container-fluid">
+            <textarea name="textarea" id="" cols="30" rows="10"></textarea>
+        </div>
+
+    </div>
+
+    <!--   /#page-content-wrapper -->
+
+</div>
+
+<!-- Scripts -->
+<script src="https://notepad.ctapvk.ru/js/app.js"></script>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/vendor/tinymce/tinymce.js"></script>
+<script>
+  var token = 'xXaMJTR6y03d3mPOeVlxEtu0Bpi7WWzs07Q1YGcf' ;
+</script>
+<script>
+  var editor = tinymce.init({
+    selector: '[name=textarea]',
+    height: 500,
+    plugins: [
+      'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+      'searchreplace wordcount visualblocks visualchars code fullscreen',
+      "insertdatetime media nonbreaking save table  directionality",
+      'emoticons template paste textcolor colorpicker textpattern imagetools codesample toc help'
+    ],
+    toolbar1: 'undo redo | insert  | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent ' ,
+    toolbar2: ' forecolor backcolor emoticons | codesample | link image | fontsizeselect',
+    fontsize_formats: '8pt 10pt 12pt 14pt 18pt 24pt 36pt' ,
+    image_advtab: true,
+    paste_data_images: true ,
+    templates: [
+      { title: 'Test template 1', content: 'Test 1' },
+      { title: 'Test template 2', content: 'Test 2' }
+    ]
+  });
+</script>
+
+
+
+</body>
+</html>
