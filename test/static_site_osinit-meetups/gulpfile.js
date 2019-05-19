@@ -78,6 +78,9 @@ function jade() {
   cur = cur.pipe(gulp.dest(PUBLIC_DIR + '/'));
   cur = cur.pipe(browsersync.stream()); // пишет в консоль что изменилось
   //
+  gulp.src(SRC_DIR + '/jade/public/**/*.png').pipe(gulp.dest(PUBLIC_DIR + '/'));
+
+  //
   cur = gulp.src(SRC_DIR + '/jade/**/*.scss');
   cur = cur.pipe(sass({outputStyle: 'expanded',}));
   if (!IS_PROD) cur = cur.pipe(sourcemaps.init());
