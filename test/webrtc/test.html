@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap/form </title>
+    <!-- awesome core  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/lib/bootstrap.min.css" rel="stylesheet">
+    <style>
+        button {
+          background-color: #d84a38;
+          border: none;
+          border-radius: 2px;
+          color: white;
+          font-family: 'Roboto', sans-serif;
+          font-size: 0.8em;
+          margin: 0 0 1em 0;
+          padding: 0.5em 0.7em 0.6em 0.7em;
+        }
+
+        button:active {
+          background-color: #cf402f;
+        }
+
+        button:hover {
+          background-color: #cf402f;
+        }
+
+        button[disabled] {
+          color: #ccc;
+        }
+
+        button[disabled]:hover {
+          background-color: #d84a38;
+        }
+
+    </style>
+</head>
+
+<body>
+    <a href="https://simpl.info/getusermedia/sources/">Пример выбора камеры в браузерe</a> ||
+    <a href="https://www.html5rocks.com/en/tutorials/getusermedia/intro/">Смена разрешения</a> ||
+    <a href="https://webrtc.github.io/samples/src/content/getusermedia/resolution/">Смена разрешения камеры</a>
+    <div class="row">
+        <div class="col-md-6">
+            <label for="audioSource">Audio source: </label><select class="custom-select" id="audioSource"></select>
+        </div>
+        <div class="col-md-6">
+            <label for="videoSource">Video source: </label><select class="custom-select" id="videoSource"></select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <p>Click a button to call <code>getUserMedia()</code> with appropriate resolution.</p>
+            <div id="buttons">
+                <button class="btn btn-primary" id="qvga">QVGA</button>
+                <button class="btn btn-primary" id="vga">VGA</button>
+                <button class="btn btn-primary" id="hd">HD</button>
+                <button class="btn btn-success" id="full-hd">Full HD</button>
+                <button class="btn btn-primary" id="fourK">4K</button>
+                <button class="btn btn-primary" id="eightK">8K</button>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <p id="dimensions"></p>
+            <div id="videoblock">
+                <div id="width">
+                    <label>Width <span></span>px:</label>
+                    <input type="range" min="0" max="7680" value="0">
+                </div>
+                <input id="sizelock" type="checkbox" checked>Lock video size<br>
+                <input id="aspectlock" type="checkbox">Lock aspect ratio<br>
+            </div>
+            <p id="errormessage"></p>
+        </div>
+    </div>
+    <div class="container">
+        <video id="gum-res-local" playsinline autoplay style='width: 100%;'></video>
+    </div>
+</body>
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/lib/jquery-3.2.1.slim.min.js"></script>
+<script src="/lib/popper.min.js"></script>
+<script src="/lib/bootstrap.min.js"></script>
+<script src="/lib/holder.min.js"></script>
+<script>
+var videoElement = document.querySelector('video');
+var audioSelect = document.querySelector('select#audioSource');
+var videoSelect = document.querySelector('select#videoSource');
+
+// смена разрешения 
+const dimensions = document.querySelector('#dimensions');
+let stream;
+
+const vgaButton = document.querySelector('#vga');
+const qvgaButton = document.querySelector('#qvga');
+const hdButton = document.querySelector('#hd');
+const fullHdButton = document.querySelector('#full-hd');
+const fourKButton = document.querySelector('#fourK');
+const eightKButton = document.querySelector('#eightK');
+
+const videoblock = document.querySelector('#videoblock');
+const messagebox = document.querySelector('#errormessage');
+
+const widthInput = document.querySelector('div#width input');
+const widthOutput = document.querySelector('div#width span');
+const aspectLock = document.querySelector('#aspectlock');
+const sizeLock = document.querySelector('#sizelock');
+
+let currentWidth = 0;
+let currentHeight = 0;
+
+//
+
+navigator.mediaDevices.enumerateDevices()
+    .then(gotDevices).then(getStream).catch(handleError);
+
+audioSelect.onchange = getStream;
+videoSelect.onchange = getStream;
+
+function gotDevices(deviceInfos) {
+    for (var i = 0; i !== deviceInfos.length; ++i) {
+        var deviceInfo = deviceInfos[i];
+        var option = document.createElement('option');
+        option.value = deviceInfo.deviceId;
+        if (deviceInfo.kind === 'audioinput') {
+            option.text = deviceInfo.label ||
+                'microphone ' + (audioSelect.length + 1);
+            audioSelect.appendChild(option);
+        } else if (deviceInfo.kind === 'videoinput') {
+            option.text = deviceInfo.label || 'camera ' +
+                (videoSelect.length + 1);
+            videoSelect.appendChild(option);
+        } else {
+            console.log('Found one other kind of source/device: ', deviceInfo);
+        }
+    }
+}
+
+function getStream() {
+    if (window.stream) {
+        window.stream.getTracks().forEach(function(track) {
+            track.stop();
+        });
+    }
+
+    var constraints = {
+        audio: {
+            deviceId: { exact: audioSelect.value }
+        },
+        video: {
+            deviceId: { exact: videoSelect.value }
+        }
+    };
+
+    navigator.mediaDevices.getUserMedia(constraints).
+    then(gotStream).catch(handleError);
+}
+
+function gotStream(mediaStream) {
+    stream = window.stream = mediaStream; // stream available to console
+    videoElement.srcObject = mediaStream;
+    messagebox.style.display = 'none';
+    videoblock.style.display = 'block';
+    let track = mediaStream.getVideoTracks()[0];
+    let constraints = track.getConstraints();
+    console.log('Result constraints: ' + JSON.stringify(constraints));
+    if (constraints && constraints.width && constraints.width.exact) {
+        widthInput.value = constraints.width.exact;
+        widthOutput.textContent = constraints.width.exact;
+    } else if (constraints && constraints.width && constraints.width.min) {
+        widthInput.value = constraints.width.min;
+        widthOutput.textContent = constraints.width.min;
+    }
+}
+
+function handleError(error) {
+    console.log('Error: ', error);
+}
+
+
+
+// смена разрешения 
+
+vgaButton.onclick = () => {
+    getMedia(vgaConstraints);
+};
+
+qvgaButton.onclick = () => {
+    getMedia(qvgaConstraints);
+};
+
+hdButton.onclick = () => {
+    getMedia(hdConstraints);
+};
+
+fullHdButton.onclick = () => {
+    getMedia(fullHdConstraints);
+};
+
+fourKButton.onclick = () => {
+    getMedia(fourKConstraints);
+};
+
+eightKButton.onclick = () => {
+    getMedia(eightKConstraints);
+};
+
+const qvgaConstraints = {
+    video: { width: { exact: 320 }, height: { exact: 240 } }
+};
+
+const vgaConstraints = {
+    video: { width: { exact: 640 }, height: { exact: 480 } }
+};
+
+const hdConstraints = {
+    video: { width: { exact: 1280 }, height: { exact: 720 } }
+};
+
+const fullHdConstraints = {
+    video: { width: { exact: 1920 }, height: { exact: 1080 } }
+};
+
+const fourKConstraints = {
+    video: { width: { exact: 4096 }, height: { exact: 2160 } }
+};
+
+const eightKConstraints = {
+    video: { width: { exact: 7680 }, height: { exact: 4320 } }
+};
+
+function errorMessage(who, what) {
+    let message = who + ': ' + what;
+    messagebox.innerText = message;
+    messagebox.style.display = 'block';
+    console.log(message);
+}
+
+function clearErrorMessage() {
+    messagebox.style.display = 'none';
+}
+
+function displayVideoDimensions(whereSeen) {
+    if (videoElement.videoWidth) {
+        dimensions.innerText = 'Actual video dimensions: ' + videoElement.videoWidth +
+            'x' + videoElement.videoHeight + 'px.';
+        if (currentWidth !== videoElement.videoWidth ||
+            currentHeight !== videoElement.videoHeight) {
+            console.log(whereSeen + ': ' + dimensions.innerText);
+            currentWidth = videoElement.videoWidth;
+            currentHeight = videoElement.videoHeight;
+        }
+    } else {
+        dimensions.innerText = 'Video not ready';
+    }
+}
+
+videoElement.onloadedmetadata = () => {
+    displayVideoDimensions('loadedmetadata');
+};
+
+videoElement.onresize = () => {
+    displayVideoDimensions('resize');
+};
+
+
+function constraintChange(e) {
+    widthOutput.textContent = e.target.value;
+    let track = window.stream.getVideoTracks()[0];
+    let constraints;
+    if (aspectLock.checked) {
+        constraints = {
+            width: { exact: e.target.value },
+            deviceId: { exact: videoSelect.value },
+            aspectRatio: {
+                exact: videoElement.videoWidth / videoElement.videoHeight
+            }
+        };
+    } else {
+        constraints = { width: { exact: e.target.value }, deviceId: { exact: videoSelect.value } };
+    }
+    clearErrorMessage();
+    console.log('applying ' + JSON.stringify(constraints));
+    track.applyConstraints(constraints)
+        .then(() => {
+            console.log('applyConstraint success');
+            displayVideoDimensions('applyConstraints');
+        })
+        .catch(err => {
+            errorMessage('applyConstraints', err.name);
+        });
+}
+
+widthInput.onchange = constraintChange;
+
+sizeLock.onchange = () => {
+    if (sizeLock.checked) {
+        console.log('Setting fixed size');
+        videoElement.style.width = '100%';
+    } else {
+        console.log('Setting auto size');
+        videoElement.style.width = 'auto';
+    }
+};
+
+function getMedia(constraints) {
+    if (stream) {
+        stream.getTracks().forEach(track => {
+            track.stop();
+        });
+    }
+    if (constraints.audio) constraints.audio.deviceId = { exact: audioSelect.value }
+    if (constraints.video) constraints.video.deviceId = { exact: videoSelect.value }
+
+    clearErrorMessage();
+    videoblock.style.display = 'none';
+    navigator.mediaDevices.getUserMedia(constraints)
+        .then(gotStream)
+        .catch(e => {
+            errorMessage('getUserMedia', e.message, e.name);
+        });
+}
+</script>
+
+</html>
