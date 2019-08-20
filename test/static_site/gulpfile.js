@@ -1,9 +1,10 @@
 /** это может собирать фронт
  *
- * из SRC_DIR/jade/public/*.jade делает html файлы + all.js all.css в PUBLIC_DIR
- * из SRC_DIR/js/*.js и SRC_DIR/scss/*.scss соответсвенно кладет файлы в PUBLIC_DIR
- * собирает DIST_CSS в PUBLIC_DIR/dist.css и DIST_JS в PUBLIC_DIR/dist.js
- * browsersync синхронизирует браузер после изменений
+ * из SRC_DIR/jade/public/*.jade делает html файлы + all.js all.css в
+ * PUBLIC_DIR
+ * из SRC_DIR/js/*.js и SRC_DIR/scss/*.scss соответсвенно кладет файлы в
+ * PUBLIC_DIR собирает DIST_CSS в PUBLIC_DIR/dist.css и DIST_JS в
+ * PUBLIC_DIR/dist.js browsersync синхронизирует браузер после изменений
  */
 const IS_PROD = false;
 const SRC_DIR = './src';
@@ -52,13 +53,18 @@ gulp.task('vendor', function(cb) {
     './node_modules/simple-line-icons/css/**',
   ]).pipe(gulp.dest(PUBLIC_DIR + '/vendor/simple-line-icons/css'));
 
-  gulp.src(SRC_DIR + '/static_copy/**').pipe(gulp.dest(PUBLIC_DIR + '/'));
+  static_copy();
   gulp.src(DIST_JS).pipe(concat('dist.js')).pipe(gulp.dest(PUBLIC_DIR + '/'));
   gulp.src(DIST_CSS).pipe(concat('dist.css')).pipe(gulp.dest(PUBLIC_DIR + '/'));
 
   cb();
 
 });
+
+function static_copy() {
+  gulp.src(SRC_DIR + '/static_copy/**')
+      .pipe(gulp.dest(PUBLIC_DIR + '/')).pipe(browsersync.stream());
+}
 
 function jade() {
   let cur = gulp.src(SRC_DIR + '/jade/public/**/*.jade');
@@ -68,15 +74,15 @@ function jade() {
   //
   cur = gulp.src(SRC_DIR + '/jade/public/static/**/*');
   cur = cur.pipe(gulp.dest(PUBLIC_DIR + '/static'));
-  //
+  // all.js
   cur = gulp.src(SRC_DIR + '/jade/**/*.js');
   if (!IS_PROD) cur = cur.pipe(sourcemaps.init());
   cur = cur.pipe(concat('all.js'));
   if (!IS_PROD) cur = cur.pipe(sourcemaps.write());
   if (IS_PROD) cur = cur.pipe(uglify());
   cur = cur.pipe(gulp.dest(PUBLIC_DIR + '/'));
-  cur = cur.pipe(browsersync.stream()); // пишет в консоль что изменилось
-  //
+  cur = cur.pipe(browsersync.stream());
+  // all.css
   cur = gulp.src(SRC_DIR + '/jade/**/*.scss');
   cur = cur.pipe(sass({outputStyle: 'expanded',}));
   if (!IS_PROD) cur = cur.pipe(sourcemaps.init());
@@ -84,7 +90,7 @@ function jade() {
   if (!IS_PROD) cur = cur.pipe(sourcemaps.write());
   if (IS_PROD) cur = cur.pipe(cleanCSS());
   cur = cur.pipe(gulp.dest(PUBLIC_DIR + '/'));
-  cur = cur.pipe(browsersync.stream()); // пишет в консоль что изменилось
+  cur = cur.pipe(browsersync.stream());
 
   return cur;
 }
@@ -93,7 +99,7 @@ function scripts() {
   let cur = gulp.src(SRC_DIR + '/js/**/*.js');
   if (IS_PROD) cur = cur.pipe(uglify());
   cur = cur.pipe(gulp.dest(PUBLIC_DIR + '/js'));
-  cur = cur.pipe(browsersync.stream()); // пишет в консоль что изменилось
+  cur = cur.pipe(browsersync.stream());
   return cur;
 }
 
@@ -122,6 +128,7 @@ function watchFiles() {
   gulp.watch(SRC_DIR + '/scss/**/*', css);
   gulp.watch(SRC_DIR + '/jade/**/*', jade);
   gulp.watch(SRC_DIR + '/js/**/*', scripts);
+  gulp.watch(SRC_DIR + '/static_copy/**/*', static_copy);
   gulp.watch(PUBLIC_DIR + '/**/*', browserSyncReload);
 }
 

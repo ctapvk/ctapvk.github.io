@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap/form </title>
+    <!-- awesome core  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/lib/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="header">Click me to toggle class</div>
+<div id="switch">switch
+    <i id='arrow' class="arrow"></i>
+</div>
+<div id="d">Lorem ipsum dolor sit amet.</div>
+
+<script>
+
+  document.querySelector('#header').addEventListener('click', function(e) {
+    e.target.classList.toggle('transition');
+  });
+  document.querySelector('#switch').addEventListener('click', function(e) {
+    document.querySelector('#d').classList.toggle('active');
+    document.querySelector('#arrow').classList.toggle('down');
+  });
+</script>
+<style>
+    #d {
+        -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+    }
+
+    #d.active {
+        opacity: 1;
+        height: auto;
+        background: #acc;
+    }
+
+    .arrow {
+        -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear;
+
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        border-radius: 2px;
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+    }
+
+    .down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+    }
+
+    /* header */
+
+    #header {
+        background: red;
+        padding: 10px 0;
+        position: relative;
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+        left: 0;
+    }
+
+    #header.transition {
+        background: green;
+        left: 50px;
+    }
+</style>
+
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/lib/jquery-3.2.1.slim.min.js"></script>
+<script src="/lib/popper.min.js"></script>
+<script src="/lib/bootstrap.min.js"></script>
+<script src="/lib/holder.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap/form </title>
+    <!-- awesome core  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/lib/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<a href="https://codepen.io/lehollandaisvolant/pen/MvOYxp">источник</a>
+<pre>
+    In the first example, everything works fine: the “break-word” does its job
+
+2)
+
+In the secondth exemple, the flex breaks everything: the text is no longer wrapping.
+
+This is NOT a bug: the CSS specs are made like this. Since the box is flexible, it has to take the “min-width: auto”, which is the width if its narrowest child, which is (in this case) the loooooong word.
+
+So, the text, again, overflows.
+
+3)
+
+The fix for the problemating the rose from the 2) is quite simple: since it’s a matter of “min-width”, one has to specify it back to the minimal, thus 0px.
+
+This “min-width: 0px” has to be put on the box that is flexible, aka the box whose parent has “display-flex”.
+</pre>
+
+<div>
+    <h2>Example without <code>display:flex</code>:</h2>
+    <div class="parent">
+        <div>Sidebar with fixed with</div>
+        <div>this is a flexible box with a really loooooooooooooooooooooooooooooooooooong word inside.</div>
+    </div>
+
+    <h2>Example with <code>display:flex</code>:</h2>
+    <div id="parent-flex" class="parent">
+        <div>Sidebar with fixed with</div>
+        <div>this is a flexible box with a really loooooooooooooooooooooooooooooooooooong word inside.</div>
+    </div>
+
+
+    <h2>Example with <code>display:flex</code> (FIXED):</h2>
+    <div id="parent-flex-fixed" class="parent">
+        <div>Sidebar with fixed with</div>
+        <div>this is a flexible box with a really loooooooooooooooooooooooooooooooooooong word inside.</div>
+    </div>
+</div>
+
+<style>
+    /* default styles */
+    .parent {
+        width: 200px;
+        overflow-wrap:break-word;
+        background: gold;
+        border: 1px solid transparent;
+    }
+    .parent div {
+        background: silver;
+        margin: 5px;
+    }
+
+    /* putting in the flex (2nd EXAMPLE) */
+    #parent-flex,
+    #parent-flex-fixed {
+        display: flex;
+    }
+
+    /* FIXING the flex example */
+    #parent-flex-fixed > div {
+        min-width: 0;
+    }
+</style>
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/lib/jquery-3.2.1.slim.min.js"></script>
+<script src="/lib/popper.min.js"></script>
+<script src="/lib/bootstrap.min.js"></script>
+<script src="/lib/holder.min.js"></script>
+</body>
+
+</html>
