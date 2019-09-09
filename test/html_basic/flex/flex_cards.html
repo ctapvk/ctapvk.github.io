@@ -11,7 +11,35 @@
     <link href="/lib/bootstrap.min.css" rel="stylesheet">
 </head>
 
+<style>
+    .categories{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 500px;
+        border: 1px solid #000;
+    }
+    .item{
+        border: 1px solid #000;
+        background: #acc;
+        width: calc(50% - 5px);
+        height: 250px;
+        margin-top: 10px;
+    }
+    @media only screen and (max-width: 1000px) {
+        .item{
+            width: 100%;
+        }
+    }
+</style>
 <body>
+
+    <div class="categories">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
 </body>
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="/lib/jquery-3.2.1.slim.min.js"></script>

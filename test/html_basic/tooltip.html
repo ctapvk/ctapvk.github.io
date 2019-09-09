@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>bootstrap/form </title>
+		<!-- awesome core  -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
+		<!-- Bootstrap core CSS -->
+		<link href="/lib/bootstrap.min.css" rel="stylesheet">
+	</head>
+	<style>
+		
+	.tooltipCustom {
+	position: relative;
+	display: inline-block;
+	}
+	.tooltipCustom .tooltipCustom__text {
+	visibility: hidden;
+	background-color: white;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	position: absolute;
+	z-index: 1;
+	top: -5px;
+	left: 110%;
+	font-size: 12px;
+	font-weight: normal;
+	width: max-content;
+	}
+	.tooltipCustom:hover .tooltipCustom__text {
+	visibility: visible;
+	}
+	</style>
+	<body>
+		<div class="tooltipCustom">toolTip
+			<span style="width: 350px;" class="tooltipCustom__text">Чем выше уровень, который модель достигнет в течении периода, тем выше процент с дохода, зависящий от уровня она получит.</span>
+		</div>
+	</body>
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="/lib/jquery-3.2.1.slim.min.js"></script>
+	<script src="/lib/popper.min.js"></script>
+	<script src="/lib/bootstrap.min.js"></script>
+	<script src="/lib/holder.min.js"></script>
+</html>
