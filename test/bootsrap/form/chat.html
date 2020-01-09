@@ -17,13 +17,13 @@
 <body>
 <style>
     .chat{
-        width: 350px;
+        width: 310px;
         position: fixed;
         right:10px;
         bottom:30px;
     }
     .my-custom-scrollbar{
-        max-height: 60vh;
+        max-height: calc(100vh - 400px);
         overflow: auto;
     }
     .roundedbtn{
@@ -83,10 +83,10 @@
 </style>
 
 <a class="button roundedbtn" href="#"
-   onclick="$('.chat').show(); $('.-roundedbtn').hide(); event.preventDefault()" >
+   onclick="$('.chat').show(); $('.roundedbtn').hide(); event.preventDefault()" >
     Chat
 </a>
-<div class="chat rounded-5 border-info" style="border: 1px solid #000; border-radius: 5px;">
+<div class="chat rounded-5 border-info" style="border: 1px solid #000; border-radius: 5px; display: none;">
 <div class="card-header white d-flex justify-content-between p-2" id="toggle" style="cursor: pointer;">
     <div class="heading d-flex justify-content-start">
         <div class="profile-photo">
