@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap/form </title>
+    <!-- awesome core  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/lib/fonts/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="/lib/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+
+<body>
+    <div class="megaDiv" ondblclick ="toggle($('.megaDiv')[0]);"> <h1>ondblclick  test ! </h1>
+        <div class="alert alert-info">Failed to execute 'requestFullscreen' on 'Element': API can only be initiated by a user gesture.
+Uncaught (in promise) TypeError: fullscreen error</div>
+<div class="container row">
+    <button class="btn btn-success" onclick="openFullscreen($('.megaDiv')[0]);">fullscreen </button>
+    <button class="btn btn-info" onclick="closeFullscreen()">close full screen</button>   
+    <button class="btn btn-danger" onclick="toggle($('.megaDiv')[0])">toggle full screen</button>   
+</div>
+    </div>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/lib/jquery-3.2.1.slim.min.js"></script>
+    <script src="/lib/popper.min.js"></script>
+    <script src="/lib/bootstrap.min.js"></script>
+    <script src="/lib/holder.min.js"></script>
+</body>
+
+<style>
+    .megaDiv{
+        background: #acc;
+        height: 100%;
+        text-align: center;
+    }
+</style>
+<script>
+
+    function toggle(elem){
+        if( (screen.availHeight || screen.height-30) <= window.innerHeight) {
+            // browser is almost certainly fullscreen
+             closeFullscreen()
+        } else {
+            openFullscreen(elem)
+        }
+    }
+
+function openFullscreen(elem) {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.mozCancelFullScreen) { /* Firefox */
+    document.mozCancelFullScreen();
+  } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE/Edge */
+    document.msExitFullscreen();
+  }
+}
+</script>
+</html>
