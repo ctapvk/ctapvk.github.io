@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MDN/blade </title>
+    <!-- awesome core  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="sd" style="height: 50vh; width: 50vw;">
+    <video id=example-video class="video-js vjs-default-skin" muted controls>
+        <source
+                src="http://localhost:1935/live/modelTest/playlist.m3u8?ZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKU1V6STFOaUlzSW1wMGFTSTZJbUV3WldSaVltRmhaalU1T1dNd1l6SXlaVFl5Tm1Oak16VTNaalUyTnpCaFlUY3dOelJtWmpjME5tTmxORFkxTWpaaU5EUmlOMkZrTnpoaU5HVTRabVF4T1dNNE5EWmhOREkwT1RRek9XSTNJbjAuZXlKaGRXUWlPaUl4SWl3aWFuUnBJam9pWVRCbFpHSmlZV0ZtTlRrNVl6QmpNakpsTmpJMlkyTXpOVGRtTlRZM01HRmhOekEzTkdabU56UTJZMlUwTmpVeU5tSTBOR0kzWVdRM09HSTBaVGhtWkRFNVl6ZzBObUUwTWpRNU5ETTVZamNpTENKcFlYUWlPakUxT0RVNU1URXdNakVzSW01aVppSTZNVFU0TlRreE1UQXlNU3dpWlhod0lqb3hOakUzTkRRM01ESXdMQ0p6ZFdJaU9pSXhJaXdpY0hKdmRtbGtaWElpT2lKdFpXMWlaWEp6SWl3aWMyTnZjR1Z6SWpwYlhYMC5jbTUwM3l6S0FnTUQyZlhZdHNNTzZvSFBfcDF1ZFdLekcwMUswclhiVGZRSWVLWGlIOF9MTXJjbTZ4SE01VjdhOFRqSGlndUs4V29ZV3FhMm5LcHNwRlJyVXAyUUVYa3V0SXlDQ2V5TkNtTWY0QTZHT2poak0xUHVHVEJvSEx1UTFSNXR2cWZXZVVlTVFPSTBJMTk3ZDAtbEFCc3pZVTBvaWsyZ2hpc2tvOVJDVjhCbmJadTZMZmJMbVpTZVNreEE0dTNNc1R3RnNoeERMdUdPaGc4UXo5QURDRk51dlpLMTdlSU9KQzBoMXd2LVpwZTVsekV1TWZGR1NIMnBfSDcxUV9GUzFKa3RaWDYtSnZsbFBvbFF3UnhNWUdPZWxwVW5rTE0wRlJ6SVkzcVZsNnh3TXBwT0xVei03TC0xUDVKdnlIemg2RU5UVHQ3MEUzMk1obHJqYkxkcTZ2VGE0bF9BbkFGVkI3MDFqYXVzY3VQaURuVzg0Z2VSQ1gxRm14LTNXc3hFekxMTnhyLXI4SUw1djMwYkNUXzhhWmtmNHNxNktZVmVRdXZiN3YxeHFkMjl5bzY0bWlkZFoybHFrZWdQZi1OeTFnbmVXc1dPRDQwM3pKZTBnLTZRSzhYT3Fqa1I4VVNwdkxWcV9Vb1kxcXhCYU9Da1VTU0JRWlM3aWR5YkdXbEQtUVhWS1A1QWZMMUg2NEtzcU1MRm5HeXhuQURWZE4xeVhPTjdGa3NlcXRJZ1hPaDZFQzMzbUtDd1IwUDN1eDBpa0pCckExTzhERkVDTFMxTEpVWUNCX3NpS0x1MWxWYmF5VXlvWTkzVWhqbjJybjZ0MzIyb2h2M19fMmZpcEZZeTdKVW5scTJpOWo0WlN1UGlJVzNVVjhzbl92bWxNVDZaRjhfNGFjNA=="
+                type="application/x-mpegURL">
+    </video>
+</div>
+</body>
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/js/mdb.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/video.js/dist/video-js.css">
+<script src="https://unpkg.com/video.js/dist/video.js"></script>
+<script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
+<script>
+  var player = videojs('example-video');
+  player.fluid(true);
+  player.aspectRatio('16:9');
+  player.fill(true);
+  player.play();
+</script>
+
+</html>
