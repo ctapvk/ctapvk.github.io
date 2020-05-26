@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Изображение по размеру блока + текст по центру </title>
+    <!-- awesome core  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css" rel="stylesheet">
+
+
+    <style>
+        .store {
+            position: relative;
+            display: block;
+            width: 200px;
+            height: 200px;
+        }
+
+        .store__image {
+            height: 100%;
+            width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+            background: rgba(0, 0, 0, 0.5);
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+
+        .store:hover .store__image {
+            border: 2px solid #E31E24 !important;
+        }
+
+        .store:hover .store__title {
+            color: #E31E24 !important;
+        }
+
+        .store__title {
+            position: absolute;
+            /*top: calc(100% - 20px);*/
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 30px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+<a href="#" class="store">
+    <img class="store__image"
+         src="https://drscdn.500px.org/photo/65042687/w%3D600_h%3D600/v2?sig=e5eadda417f6bce2596f4218e2621dd7937c3181875a7f4182d91e50c6690149"
+         alt="">
+    <div class="store__title">Title</div>
+</a>
+</body>
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/js/mdb.min.js"></script>
+</html>
