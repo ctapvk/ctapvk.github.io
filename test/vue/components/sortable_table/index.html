@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" class="section">
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Buefy Sortablejs - set order number using  a the sort method</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'><link rel='stylesheet' href='https://unpkg.com/buefy@0.8.4/dist/buefy.min.css'>
+<link rel='stylesheet' href='https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css'>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.6/css/all.css'>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app" class="container">
+
+  <section>
+    <b-table v-sortable="sortableOptions" 
+             :data="data"
+             @click="(row) => $toast.open(`Clicked ${row.first_name}`)">
+
+      <template slot-scope="props">
+        <b-table-column field="order" label="#" width="40" numeric>
+          {{ props.row.order }}
+        </b-table-column>
+
+        <b-table-column field="codigo" label="Código">
+          {{ props.row.codigo }}
+        </b-table-column>
+
+        <b-table-column field="cliente" label="Cliente">
+          {{ props.row.cliente }}
+        </b-table-column>
+
+        <b-table-column field="direccion" label="Dirección">
+          {{ props.row.direccion }}
+        </b-table-column>
+        
+      </template>
+
+    </b-table>
+  </section>
+
+</div>
+<!-- partial -->
+  <script src='https://unpkg.com/vue@2.6.0/dist/vue.min.js'></script>
+<script src='https://unpkg.com/buefy@0.6.7'></script>
+<script src='https://unpkg.com/axios@0.18.0/dist/axios.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js'></script>
+<script src='https://unpkg.com/cleave.js@1.4.10/dist/cleave.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/sortablejs@1.6.1/Sortable.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
