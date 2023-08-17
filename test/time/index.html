@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Time with milisec</title>
+</head>
+<body>
+
+<div id="t"></div>
+<script>
+    var int = setInterval(e => {
+        const date = new Date()
+        const time = date.toISOString().split("T")[0].split("-").reverse().join(".") + " "
+            + date.toISOString().split("T")[1].split(".")[0] + "."
+            + date.getMilliseconds()
+        document.getElementById("t").innerHTML = time
+        document.title = time
+    }, 50)
+</script>
+<style>
+    #t {
+        font-size: 24px;
+        background: white;
+    }
+</style>
+</body>
+</html>
