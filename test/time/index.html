@@ -12,10 +12,10 @@
         const date = new Date()
         const time = date.toISOString().split("T")[0].split("-").reverse().join(".") + " "
             + date.toISOString().split("T")[1].split(".")[0] + "."
-            + date.getMilliseconds()
+            + date.getMilliseconds().toString().slice(0, 2)
         document.getElementById("t").innerHTML = time
         document.title = time
-    }, 50)
+    }, 1)
 </script>
 <style>
     #t {
