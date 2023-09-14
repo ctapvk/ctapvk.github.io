@@ -1,55 +1,71 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-  
-<title>Часы с миллисекундами by HTML.BY team</title> 
-  
-<style type="text/css"> 
-<!-- 
-#time { 
-    font: 16px Arial;  /* Общий размер и стиль шрифта часов */ 
-    font-weight: bold; /* Выделение "жирным" */ 
-} 
--->
-</style> 
-  
-<script type="text/javascript"> 
-<!-- 
-function Clock_ms() { 
-  
-    /* Настройки внешнего вида */ 
-    var c_h  =      '#FF0000';      // Цвет часов 
-    var c_m  =      '#0000FF';  // Цвет минут 
-    var c_s  =      '#009900';  // Цвет секунд 
-    var c_ms =      '#CC9900';  // Цвет миллисекунд 
-    var sep  =      '#000000';  // Цвет разделителей 
-    /* ======== /END ======== */ 
-  
-    /* Для нормальной работы скрипта ниже лучше ничего не менять! */ 
-    var data = new Date(); 
-    var hour = data.getHours(); 
-    var min = data.getMinutes(); 
-    var sec = data.getSeconds(); 
-    var ms = (data.getTime()/10).toFixed(0).substr(10); 
-    if (hour<10) {hour = '0' + hour}; 
-    if (min<10) {min = '0' + min}; 
-    if (sec<10) {sec = '0' + sec}; 
-    var time = '<span style="color:'+c_h+'">'+hour+'</span>'+'<span style="color:'+sep+'">:</span>'+'<span style="color:'+c_m+'">'+min+'</span>'+'<span style="color:'+sep+'">:</span>'+'<span style="color:'+c_s+'">' +sec +'</span>'+'<span style="color:'+sep+'">.</span>'+'<span style="color:'+c_ms+'">'+ms+'</span>'; 
-    document.getElementById('time').innerHTML = time; 
-    setTimeout("Clock_ms()",1); 
-    /* ========================== /END ========================== */ 
-} 
-onload = Clock_ms; 
-//-->
-</script> 
-  
-</head> 
-  
-<body> 
-  
-<span id="time"><span style="color:#FF0000">15</span><span style="color:#000000">:</span><span style="color:#0000FF">57</span><span style="color:#000000">:</span><span style="color:#009900">05</span><span style="color:#000000">.</span><span style="color:#CC9900">22</span></span> 
-  
- 
-</body></html>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Часы с миллисекундами by HTML.BY team</title>
+
+    <style type="text/css">
+        <!--
+        #time {
+            font: 56px Arial; /* Общий размер и стиль шрифта часов */
+            font-weight: bold; /* Выделение "жирным" */
+        }
+
+        -->
+    </style>
+
+    <script type="text/javascript">
+        <!--
+        function Clock_ms() {
+
+            /* Настройки внешнего вида */
+            var c_h = '#FF0000';      // Цвет часов
+            var c_m = '#0000FF';  // Цвет минут
+            var c_s = '#009900';  // Цвет секунд
+            var c_ms = '#CC9900';  // Цвет миллисекунд
+            var sep = '#000000';  // Цвет разделителей
+            /* ======== /END ======== */
+
+            /* Для нормальной работы скрипта ниже лучше ничего не менять! */
+            var data = new Date();
+            var hour = data.getHours();
+            var min = data.getMinutes();
+            var sec = data.getSeconds();
+            var ms = (data.getTime() / 10).toFixed(0).substr(10);
+            if (hour < 10) {
+                hour = '0' + hour
+            }
+            ;
+            if (min < 10) {
+                min = '0' + min
+            }
+            ;
+            if (sec < 10) {
+                sec = '0' + sec
+            }
+            ;
+            var time = '<span style="color:' + c_h + '">' + hour + '</span>' + '<span style="color:' + sep + '">:</span>' + '<span style="color:' + c_m + '">' + min + '</span>' + '<span style="color:' + sep + '">:</span>' + '<span style="color:' + c_s + '">' + sec + '</span>' + '<span style="color:' + sep + '">.</span>' + '<span style="color:' + c_ms + '">' + ms + '</span>';
+            document.getElementById('time').innerHTML = time;
+            setTimeout("Clock_ms()", 1);
+            /* ========================== /END ========================== */
+        }
+
+        onload = Clock_ms;
+        //-->
+    </script>
+
+</head>
+
+<body>
+
+<span id="time"><span style="color:#FF0000">15</span><span style="color:#000000">:</span><span
+        style="color:#0000FF">57</span><span style="color:#000000">:</span><span style="color:#009900">05</span><span
+        style="color:#000000">.</span><span style="color:#CC9900">22</span></span>
+
+
+</body>
+</html>
