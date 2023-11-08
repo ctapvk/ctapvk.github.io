@@ -1,2 +1,2 @@
 default:
-	php -S 0.0.0.0:1717
+	php -S localhost:1717
