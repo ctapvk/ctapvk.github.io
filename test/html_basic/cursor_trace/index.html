@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Example Mouse Tracker</title>
+    <style>
+        @keyframes headerLane {
+            10% {
+                background-image: url(./cursor_trace/1.png);
+                opacity: 0.9;
+            }
+            40% {
+                background-image: url(./cursor_trace/2.png);
+                opacity: 0.6;
+            }
+            60% {
+                background-image: url(./cursor_trace/2.png);
+                opacity: 0.5;
+                top: 20px;
+            }
+            90% {
+                background-image: url(./cursor_trace/3.png);
+                opacity: 0.4;
+                transform: scale(0.7);
+            }
+        }
+
+        .dot {
+            animation-name: headerLane;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            /*transition: 2s;*/
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+<p>Mouse tracker</p>
+<script>
+    let lastX = 99999;
+    let lastY = 99999;
+    onmousemove = function (e) {
+        if (Math.abs(lastX - e.clientX) < 90 && Math.abs(lastY - e.clientY) < 90) {
+            return
+        }
+        lastX = e.clientX
+        lastY = e.clientY
+        //Logging purposes
+        // console.log("mouse location:", e.clientX, e.clientY);
+        //meat and potatoes of the snippet
+        var pos = e;
+        var dot;
+        dot = document.createElement('div');
+        dot.className = "dot";
+        dot.style.left = pos.x + "px";
+        dot.style.top = pos.y + "px";
+        document.body.appendChild(dot);
+        setTimeout(() => {
+            dot.remove()
+        }, 3000)
+    }
+</script>
+</body>
+</html>
